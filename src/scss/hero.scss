@@ -3,10 +3,10 @@
 
 .hero {
   //   text-align: center;
-  max-width: 100vw;
-  max-height: 100%;
+  width: 100vw;
+  //   max-height: 100%;
   height: 100vh;
-  padding-top: 302px;
+  // padding-top: 302px;
   background-image: url('../img/hero.jpg');
   background-position: center;
   background-size: cover;
@@ -16,7 +16,7 @@
   text-align: left;
   width: 656px;
   height: 420px;
-  top: 302px;
+  margin-top: 302px;
   padding: 28px;
   border-radius: 30px;
   background: linear-gradient(

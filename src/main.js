@@ -1,6 +1,12 @@
 import '/scss/styles.scss';
 import '/scss/header.scss';
 import '/scss/hero.scss';
+import '/scss/features.scss';
+import '/scss/choice.scss';
+import '/scss/products.scss';
+import '/scss/exclusive.scss';
+import '/scss/selections.scss';
+import '/scss/footer.scss';
 
 // import javascriptLogo from "../javascript.svg";
 // import viteLogo from "../public/favicon/vite.svg";
