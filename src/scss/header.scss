@@ -3,5 +3,18 @@
 
 .header {
   position: fixed;
+  text-align: right;
+  width: 100vw;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(10px);
   color: $color-primary;
+  & .container {
+    padding: 28px 0;
+  }
+}
+
+.header-tlf {
+  color: $color-primary;
+  font-size: 24px;
+  line-height: 1.5;
 }
