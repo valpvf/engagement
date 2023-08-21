@@ -40,4 +40,4 @@ jobs:
           # GITHUB_TOKEN: ${{ secrets.KEY }}
           BRANCH: gh-pages
           FOLDER: public
-          CLEAN: true
+          # CLEAN: true
