@@ -1,0 +1,22 @@
+{
+  "name": "engagement",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "glob": "^10.3.3",
+    "sass": "^1.66.1",
+    "vite": "^4.4.5",
+    "vite-plugin-html": "^3.2.0"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1",
+    "vite-plugin-full-reload": "^1.0.5",
+    "vite-plugin-html-inject": "^1.0.1"
+  }
+}
