@@ -1,0 +1,28 @@
+@import 'normalize.css';
+@import 'variables.scss';
+
+.hero {
+  //   text-align: center;
+  max-width: 100vw;
+  max-height: 100%;
+  height: 100vh;
+  padding-top: 302px;
+  background-image: url('../img/hero.jpg');
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-cover {
+  text-align: left;
+  width: 656px;
+  height: 420px;
+  top: 302px;
+  padding: 28px;
+  border-radius: 30px;
+  background: linear-gradient(
+    125deg,
+    rgba(10, 13, 23, 0.22) 0%,
+    rgba(10, 13, 23, 0) 100%
+  );
+  backdrop-filter: blur(21.5px);
+}

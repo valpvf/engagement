@@ -1,12 +1,17 @@
-@import "normalize.css";
-@import "variables.scss";
-@import "header.scss";
+@import 'normalize.css';
+@import 'variables.scss';
+@import url('./header.scss');
 
-// root {
-//   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-//   line-height: 1.5;
-//   font-weight: 400;
+root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
 
+.container {
+  width: 1920px;
+  margin: 0 auto;
+}
 //   color-scheme: light dark;
 //   color: rgba(255, 255, 255, 0.87);
 //   background-color: #242424;
