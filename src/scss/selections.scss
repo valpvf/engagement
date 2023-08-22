@@ -7,7 +7,7 @@
 
 .selections-wrap {
   display: flex;
-  gap: 15px;
+  gap: 135px;
   justify-content: space-between;
 }
 
@@ -36,8 +36,12 @@
   }
   &:nth-child(3) {
     margin-left: 120px;
+    margin-bottom: 96px;
     & a {
       text-decoration-line: underline;
     }
   }
+}
+
+.selections-btn {
 }
