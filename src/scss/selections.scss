@@ -1,6 +1,10 @@
 @import 'normalize.css';
 @import 'variables.scss';
 
+.selections {
+  background: #fbfbfb;
+}
+
 .selections-wrap {
   display: flex;
   gap: 15px;
@@ -22,16 +26,18 @@
 }
 
 .selections-text {
-  display: inline;
-  width: 655px;
+  width: 410px;
   height: auto;
   color: $color-primary;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.5;
   &:nth-child(2) {
     margin-left: 60px;
   }
   &:nth-child(3) {
     margin-left: 120px;
+    & a {
+      text-decoration-line: underline;
+    }
   }
 }

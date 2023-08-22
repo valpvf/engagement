@@ -3,7 +3,6 @@
 
 .header {
   position: fixed;
-  text-align: right;
   width: 100vw;
   background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(10px);
@@ -14,8 +13,19 @@
   }
 }
 
+.header-nav {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: end;
+}
+
 .header-tlf {
   color: $color-primary;
   font-size: 24px;
   line-height: 1.5;
+}
+
+.header-icon {
+  stroke: $color-primary;
 }
