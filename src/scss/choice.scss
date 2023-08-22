@@ -11,3 +11,22 @@
   line-height: 1.5;
   margin-bottom: 48px;
 }
+.choice-form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.choice-input {
+  width: 494px;
+  height: 84px;
+  border-radius: 30px;
+  border: 1px solid $color-grey;
+  background: #fff;
+  font-size: 20px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.choice-btn.btn {
+  background-color: $color-grey;
+}
