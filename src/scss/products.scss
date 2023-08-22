@@ -1,2 +1,13 @@
 @import 'normalize.css';
 @import 'variables.scss';
+
+.products-cover {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  & div {
+    height: 650px;
+    width: 280px;
+    border: solid #ccc;
+  }
+}

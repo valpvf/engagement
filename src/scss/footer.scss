@@ -1,2 +1,8 @@
 @import 'normalize.css';
 @import 'variables.scss';
+
+.footer {
+  height: 420px;
+  background: $color-primary;
+  color: #fff;
+}

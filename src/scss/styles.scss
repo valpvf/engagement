@@ -8,20 +8,21 @@ html {
 
 body {
   margin: 0;
-  color: var(--primary-heading-color);
+  color: $color-primary;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.16;
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
+  overflow: auto;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+// code {
+//   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+//     monospace;
+// }
+
 * {
   box-sizing: border-box;
 }

@@ -1,2 +1,41 @@
 @import 'normalize.css';
 @import 'variables.scss';
+
+// .features-title {}
+
+.features-wrap {
+  display: flex;
+  gap: 155px;
+  justify-content: space-between;
+}
+
+.features-bell {
+  min-width: 500px;
+  width: 665px;
+  height: 520px;
+  background-color: burlywood;
+}
+
+.features-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.features-text {
+  display: inline;
+  width: 790px;
+  height: auto;
+  color: $color-primary;
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+.features-art-text {
+  color: #6c6a68;
+  font-family: Marianna;
+  font-size: 100px;
+  font-weight: 400;
+  text-align: center;
+  opacity: 0.2;
+}

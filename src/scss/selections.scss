@@ -1,2 +1,37 @@
 @import 'normalize.css';
 @import 'variables.scss';
+
+.selections-wrap {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.selections-bell {
+  min-width: 500px;
+  width: 665px;
+  height: 520px;
+  background-color: burlywood;
+}
+
+.selections-inner {
+  display: flex;
+  gap: 24px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.selections-text {
+  display: inline;
+  width: 655px;
+  height: auto;
+  color: $color-primary;
+  font-size: 24px;
+  line-height: 1.5;
+  &:nth-child(2) {
+    margin-left: 60px;
+  }
+  &:nth-child(3) {
+    margin-left: 120px;
+  }
+}
