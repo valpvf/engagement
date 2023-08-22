@@ -1,13 +1,48 @@
 @import 'normalize.css';
 @import 'variables.scss';
 
+.products {
+  & .container {
+    padding: 14px 32px;
+  }
+}
 .products-cover {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  & div {
-    height: 650px;
-    width: 280px;
-    border: solid #ccc;
-  }
+}
+
+.products-card {
+  display: flex;
+  flex-direction: column;
+  width: 280px;
+  padding: 18px;
+  border: solid #ccc;
+}
+
+.product-img {
+  text-align: center;
+  width: 240px;
+  height: 240px;
+  margin-bottom: 16px;
+  border: solid #ccc;
+}
+
+.product-name {
+  padding-bottom: 4px;
+  color: $color-primary;
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+.product-text {
+  color: $color-grey;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.product-price {
+  color: #901719;
+  font-size: 32px;
+  line-height: 1.5;
 }
