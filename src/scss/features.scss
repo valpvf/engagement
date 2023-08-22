@@ -5,20 +5,20 @@
 
 .features-wrap {
   display: flex;
-  gap: 155px;
+  gap: 71px;
   justify-content: space-between;
 }
 
 .features-bell {
-  min-width: 500px;
-  width: 665px;
-  height: 520px;
+  min-width: 545px;
+  width: 545px;
+  height: 415px;
   background-color: burlywood;
 }
 
 .features-inner {
   display: flex;
-  flex-direction: column;
+  // flex-direction: column;
   justify-content: space-between;
 }
 
@@ -27,14 +27,14 @@
   width: 790px;
   height: auto;
   color: $color-primary;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.5;
 }
 
 .features-art-text {
   color: #6c6a68;
   font-family: Marianna;
-  font-size: 100px;
+  font-size: 140px;
   font-weight: 400;
   text-align: center;
   opacity: 0.2;
