@@ -2,7 +2,7 @@ import './jquery-3.7.0.min.js';
 import './slick.min.js';
 import { getDataApi } from '../servises/productsApi.js';
 
-window.onload = async function () {
+async function foo() {
   const mainData = await getDataApi().then(res => res.products);
   const images = mainData.map(el => el.mainImage);
 
@@ -62,4 +62,6 @@ window.onload = async function () {
       // appendDots: $('.content'),
     });
   });
-};
+}
+
+foo();
