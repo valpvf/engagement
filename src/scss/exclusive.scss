@@ -15,8 +15,14 @@
   opacity: 0.2;
 }
 
-.exclusive-slider {
-  width: 100%;
-  height: 430px;
-  border: solid #6c6a68;
+// .exclusive-slider {
+//   width: 100%;
+//   height: 430px;
+//   border: solid #6c6a68;
+// }
+
+.exclusive-img {
+  max-height: 400px !important;
+  max-width: 300px;
+  background-size: cover;
 }

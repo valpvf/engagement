@@ -1,10 +1,16 @@
-BASE_URL =
-  'https://script.googleusercontent.com/macros/echo?user_content_key=JJIDav02XaC2-y4P9ohSVTJxyxvRWQW3bK2wa3vjtNQzG5VIn9imTDm8OmBicuIQcVaOEk9WQyBd03mdhqKTFnJB1z9QJLlsm5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnD48J8nIhV-6LKXIIwy6m0h0kix1hzBizS4zUJy4mpzebf3Mg65w5hMdQdYRx9duhTPOqg7vMi0T5STNFEfLSC5revtnZ8zKBw&lib=Mh-ov8Z7pxaeIZrJ0HHhuCctsyLOaM_gI';
+import axios from 'axios';
 
-fetch(BASE_URL)
-  .then(response => {
-    return response.json();
-  })
-  .then(data => {
-    console.log(data);
-  });
+const baseUrl =
+  'https://script.google.com/macros/s/AKfycbyxlJ7YtF4uiKRYsaX7Nyn-ckOwpD0JxBXl2iRoGErPLnhbfWisqEtgtRUzfhJViSQJ/exec';
+
+axios.defaults.baseURL = baseUrl;
+const params = {
+  user_content_key:
+    'mvzyGmSX5pI4InC7bb12Zb1sMk-pL9V5h_NVWR2TGG4jZjEkzRRmvfXgj-5_q_awpeE3pKktwq3EwpTPltv9bqSmC0WvVeM5m5_BxDlH2jW0nuo2oDemN9CCS2h10ox_1xSncGQajx_ryfhECjZEnPZeeK5gCg2ZLA5xY_bt69ylP6EoTGqvP9ffFV40UnczmU0ddFX0clJovTEw3iurfZuGdyZET9AjmRpe7SKlWks4-TjRvL9cxA',
+  lib: 'Mh-ov8Z7pxaeIZrJ0HHhuCctsyLOaM_gI',
+};
+
+export const getDataApi = async () => {
+  const res = await axios.get('', { params });
+  return res.data;
+};
