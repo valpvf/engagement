@@ -1,0 +1,70 @@
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+  //Включение адаптивной высоты
+  align-items: flex-start;
+}
+
+.slider__item {
+  transition: all 0.3s ease 0s;
+  text-align: center;
+  opacity: 0.7;
+  &.slick-center {
+    opacity: 1;
+  }
+}
+
+.slider {
+  position: relative;
+  //Для кнопок
+  //   padding: 0 50px;
+
+  & .slick-arrow {
+    position: absolute;
+    top: 50%;
+    // Положение кнопок по вертикали
+    margin: -30px 0 0 0;
+    z-index: 10;
+    // font-size: 0;
+    // Размер кнопок
+    // width: 30px;
+    // height: 60px;
+
+    &.slick-prev {
+      left: 20;
+      background-color: #ccc;
+      // background: url('...svg') 0 0 / 100% no-repeat;
+    }
+    &.slick-next {
+      right: 20;
+      background-color: #ccc;
+      // background: url('...svg') 0 0 / 100% no-repeat;
+    }
+    .slick-disabled {
+      opacity: 0.2;
+    }
+  }
+
+  & .slick-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & li {
+      list-style: none;
+      &.slick-active button {
+        background-color: transparent;
+        border: solid #f00;
+      }
+    }
+    & button {
+      font-size: 0;
+      width: 10px;
+      height: 10px;
+      background-color: #ccc;
+      border-radius: 50%;
+    }
+  }
+}
