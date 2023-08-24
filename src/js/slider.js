@@ -20,7 +20,7 @@ async function foo() {
       const slide = document.createElement('div');
       slide.classList.add('slider__item');
       slide.innerHTML = `
-        <img src="${images[i]}" alt="Image ${i + 1}" height="350">
+        <img src="${images[i]}" alt="Image ${i + 1}" height="324">
     `;
       slider.insertAdjacentElement('afterbegin', slide);
     }
@@ -29,6 +29,10 @@ async function foo() {
       $(document).ready(function () {
         $('.slider').slick({
           arrows: true,
+          prevArrow:
+            "<img src='https://www.svgrepo.com/show/522366/chevron-left.svg' class='slick-prev' alt='previous'>",
+          nextArrow:
+            "<img src='https://www.svgrepo.com/show/522374/chevron-right.svg' class='slick-next' alt='next'>",
           dots: true,
           adaptiveHeight: true,
           slidesToShow: 3,
