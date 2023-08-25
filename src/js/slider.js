@@ -25,50 +25,47 @@ async function foo() {
       slider.insertAdjacentElement('afterbegin', slide);
     }
 
-    setTimeout(
-      $(document).ready(function () {
-        $('.slider').slick({
-          arrows: true,
-          dots: true,
-          adaptiveHeight: true,
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          speed: 1000,
-          easing: 'ease',
-          //Бескнечность слайдера
-          infinite: true,
-          //Стартовый слайд
-          initialSlide: 0,
-          autoplay: true,
-          autoplaySpeed: 1500,
-          pauseOnDotsHover: true,
-          pauseOnFocus: true,
-          pauseOnHover: true,
-          //Перемещение мышкой и пальцем
-          draggable: true,
-          swipe: true,
-          centerMode: true,
-          responsive: [
-            {
-              breakpoint: 768,
-              setting: {
-                slidesToShow: 2,
-              },
+    $(document).ready(function () {
+      $('.slider').slick({
+        arrows: true,
+        dots: true,
+        adaptiveHeight: true,
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        speed: 1000,
+        easing: 'ease',
+        //Бескнечность слайдера
+        infinite: true,
+        //Стартовый слайд
+        initialSlide: 0,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        pauseOnDotsHover: true,
+        pauseOnFocus: true,
+        pauseOnHover: true,
+        //Перемещение мышкой и пальцем
+        draggable: true,
+        swipe: true,
+        centerMode: true,
+        responsive: [
+          {
+            breakpoint: 768,
+            setting: {
+              slidesToShow: 2,
             },
-            {
-              breakpoint: 375,
-              setting: {
-                slidesToShow: 1,
-              },
+          },
+          {
+            breakpoint: 375,
+            setting: {
+              slidesToShow: 1,
             },
-          ],
-          mobileFirst: true,
-          // appendArrows: $('.content'),
-          // appendDots: $('.content'),
-        });
-      }),
-      2000
-    );
+          },
+        ],
+        mobileFirst: true,
+        // appendArrows: $('.content'),
+        // appendDots: $('.content'),
+      });
+    });
   } catch (error) {
     console.error(error);
   }
