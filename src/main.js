@@ -34,3 +34,4 @@ import '/scss/slick.scss';
 // `;
 
 // setupCounter(document.querySelector("#counter"));
+console.log('main');

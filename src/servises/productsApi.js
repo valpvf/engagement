@@ -12,5 +12,6 @@ const params = {
 
 export const getDataApi = async () => {
   const res = await axios.get('', { params });
+  console.log('Api');
   return res.data;
 };
