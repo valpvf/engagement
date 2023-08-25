@@ -1,17 +1,12 @@
-// import './jquery-3.7.0.min.js';
-// import $ from 'jquery';
-// import './slick.min.js';
 import { getDataApi } from '../servises/productsApi.js';
 
 foo();
 
 async function foo() {
-  console.log('foo');
   try {
     const mainData = await getDataApi().then(res => res.products);
 
     const images = mainData.map(el => el.mainImage);
-    console.log('images', images);
 
     const totalSlides = images.length;
 
@@ -27,11 +22,9 @@ async function foo() {
     `;
       slider.insertAdjacentElement('afterbegin', slide);
     }
-    console.log('render end');
   } catch (error) {
     console.log(error);
   } finally {
-    console.log('finally');
     $(document).ready(function () {
       $('.slider').slick({
         arrows: true,
@@ -73,6 +66,5 @@ async function foo() {
         // appendDots: $('.content'),
       });
     });
-    console.log('slider render end');
   }
 }
