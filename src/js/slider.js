@@ -29,10 +29,6 @@ async function foo() {
       $(document).ready(function () {
         $('.slider').slick({
           arrows: true,
-          prevArrow:
-            "<img src='https://www.svgrepo.com/show/522366/chevron-left.svg' class='slick-prev' alt='previous'>",
-          nextArrow:
-            "<img src='https://www.svgrepo.com/show/522374/chevron-right.svg' class='slick-next' alt='next'>",
           dots: true,
           adaptiveHeight: true,
           slidesToShow: 3,
