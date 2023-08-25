@@ -1,5 +1,6 @@
-import './jquery-3.7.0.min.js';
-import './slick.min.js';
+// import './jquery-3.7.0.min.js';
+// import $ from 'jquery';
+// import './slick.min.js';
 import { getDataApi } from '../servises/productsApi.js';
 
 foo();
