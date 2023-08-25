@@ -24,7 +24,9 @@ async function foo() {
     `;
       slider.insertAdjacentElement('afterbegin', slide);
     }
-
+  } catch (error) {
+    console.error(error);
+  } finally {
     $(document).ready(function () {
       $('.slider').slick({
         arrows: true,
@@ -66,7 +68,5 @@ async function foo() {
         // appendDots: $('.content'),
       });
     });
-  } catch (error) {
-    console.error(error);
   }
 }

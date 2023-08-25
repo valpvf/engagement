@@ -10,7 +10,8 @@
   color: $color-primary;
   z-index: 1;
   & .container {
-    padding: 28px 0;
+    padding-top: 28px;
+    padding-bottom: 28px;
   }
 }
 
