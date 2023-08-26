@@ -1,5 +1,6 @@
 import './js/slider.js';
 
+import '/scss//iconsfont.scss';
 import '/scss/styles.scss';
 import '/scss/header.scss';
 import '/scss/hero.scss';
