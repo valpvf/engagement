@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'icons';
+  src: url('../fonts/icons/fonts/icons.eot?7gaex6');
+  src: url('../fonts/icons/fonts/icons.eot?7gaex6#iefix')
+      format('embedded-opentype'),
+    url('../fonts/icons/fonts/icons.ttf?7gaex6') format('truetype'),
+    url('../fonts/icons/fonts/icons.woff?7gaex6') format('woff'),
+    url('../fonts/icons/fonts/icons.svg?7gaex6#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icons' !important;
+  // speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// .icon-whatsapp .path1:before {
+//   content: '\e900';
+//   color: rgb(241, 241, 241);
+// }
+// .icon-whatsapp .path2:before {
+//   content: '\e901';
+//   margin-left: -1em;
+//   color: rgb(102, 224, 102);
+// }
+// .icon-whatsapp .path3:before {
+//   content: '\e902';
+//   margin-left: -1em;
+//   color: rgb(241, 241, 241);
+// }
+.icon-viber:before {
+  content: '\e903';
+  color: #603a88;
+}
+.icon-tiktok:before {
+  content: '\e904';
+  color: #69c9d0;
+}
+.icon-telegram:before {
+  content: '\e906';
+  color: #1b92d1;
+}
+.icon-instagram:before {
+  content: '\e907';
+  color: #dd2a7b;
+}
+// .icon-facebook .path1:before {
+//   content: '\e908';
+//   color: rgb(24, 119, 242);
+// }
+// .icon-facebook .path2:before {
+//   content: '\e909';
+//   margin-left: -1em;
+//   color: rgb(241, 241, 241);
+// }
+.icon-email:before {
+  content: '\e90a';
+}
+.icon-call:before {
+  content: '\e90b';
+}
+.icon-ring3:before {
+  content: '\e905';
+}
