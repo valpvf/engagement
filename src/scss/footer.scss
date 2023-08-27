@@ -1,5 +1,6 @@
 @import 'normalize.css';
 @import 'variables.scss';
+
 .container {
   padding: 16px;
 }
@@ -7,6 +8,7 @@
   background: $color-primary;
   color: #fff;
 }
+
 .social-container-wrap {
   display: flex;
   align-items: center;
@@ -46,11 +48,10 @@
 .footer-item a:visited {
   color: #fff;
 }
-.nav-link {
-}
+// .nav-link {}
 
-.active {
-}
+// .active {}
+
 .footer-img {
   background-color: burlywood;
 }
@@ -115,99 +116,118 @@
   -ms-transition: -ms-transform 0.7s;
   -o-transition: -o-transform 0.7s;
   transition: transform 0.7s;
+  &:first-child {
+    border: none;
+    padding-left: 6px;
+  }
 }
-.social-container .ring3 {
-  color: $color-primary;
-  border-color: $color-primary;
+.social-container .ring {
+  color: #deb887;
+  border-color: #deb887;
 }
 .social-container .facebook {
-  color: #3b5998;
-  border-color: #3b5998;
+  color: #1877f2;
+  border-color: #1877f2;
 }
-.social-container .googleplus {
-  color: #dd4b39;
-  border-color: #dd4b39;
+.social-container .email {
+  color: #f5f50c;
+  border-color: #f5f50c;
 }
-.social-container .pinterest {
+.social-container .telegram {
+  color: #1b92d1;
+  border-color: #1b92d1;
+}
+.social-container .phone {
   color: #cc2127;
   border-color: #cc2127;
 }
-.social-container .dribbble {
-  color: #ea4c89;
-  border-color: #ea4c89;
-}
 .social-container .instagram {
-  color: #5c3d2e;
-  border-color: #5c3d2e;
+  color: #dd2a7b;
+  border-color: #dd2a7b;
 }
-.social-container .linkedin {
-  color: #007fb1;
-  border-color: #007fb1;
+.social-container .tiktok {
+  color: #69c9d0;
+  border-color: #69c9d0;
 }
 .social-container .viber {
   color: #7360f2;
   border-color: #7360f2;
 }
-.social-container .codepen {
-  color: #f5f50c;
-  border-color: #f5f50c;
+.social-container .whatsapp {
+  color: #66e066;
+  border-color: #66e066;
 }
+
 .social-container a i {
+  padding-top: 6px;
+  font-size: 26px;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
+  &.icon-ring3 {
+    font-size: 60px;
+  }
 }
 
-.social-container a:hover {
-  background: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.5);
-  color: rgba(255, 255, 255, 1);
-  -webkit-transform: scale(1.3, 1.3);
-  -moz-transform: scale(1.3, 1.3);
-  -ms-transform: scale(1.3, 1.3);
-  -o-transform: scale(1.3, 1.3);
-  transform: scale(1.3, 1.3);
+.social-container {
+  & a:hover {
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 1);
+    -webkit-transform: scale(1.3, 1.3);
+    -moz-transform: scale(1.3, 1.3);
+    -ms-transform: scale(1.3, 1.3);
+    -o-transform: scale(1.3, 1.3);
+    transform: scale(1.3, 1.3);
+    &:first-child {
+      border: none;
+      // padding-left: 6px;
+    }
+  }
+  & .whatsapp:hover,
+  .email:hover,
+  .tiktok:hover {
+    color: rgba(0, 0, 0, 0.8) !important;
+    border-color: rgba(0, 0, 0, 0.8);
+  }
 }
-.social-container .codepen:hover {
-  color: rgba(0, 0, 0, 0.8);
-  border-color: rgba(0, 0, 0, 0.8);
-}
+
 /* Hover background colors */
-.color-ring3 {
-  background-color: #fff !important;
+.color-ring {
+  background-color: #deb887 !important;
 }
 .color-facebook {
-  background-color: #3b5998 !important;
+  background-color: #1877f2 !important;
 }
-.color-pinterest {
+.color-telegram {
+  background-color: #1b92d1 !important;
+}
+.color-email {
+  background-color: #f5f50c !important;
+}
+.color-whatsapp {
+  background-color: #66e066 !important;
+}
+.color-phone {
   background-color: #cc2127 !important;
 }
-.color-googleplus {
-  background-color: #dd4b39 !important;
-}
-.color-codepen {
-  background-color: rgba(255, 255, 255, 1) !important;
-}
-.color-dribbble {
-  background-color: #ea4c89 !important;
-}
 .color-instagram {
-  background-color: #5c3d2e !important;
+  background-color: #dd2a7b !important;
 }
-.color-linkedin {
-  background-color: #007fb1 !important;
+.color-tiktok {
+  background-color: #69c9d0 !important;
 }
 .color-viber {
   background-color: #7360f2 !important;
 }
 
-.color-twitter,
+.color-ring,
 .color-facebook,
-.color-pinterest,
-.color-googleplus,
-.color-dribbble,
+.color-telegram,
+.color-phone,
+.color-email,
 .color-instagram {
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
