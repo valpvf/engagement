@@ -16,8 +16,8 @@
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
     />
     
-    <script type="module" crossorigin src="/engagement/assets/index-0ce30844.js"></script>
-    <link rel="stylesheet" href="/engagement/assets/index-8c877084.css">
+    <script type="module" crossorigin src="/engagement/assets/index-82e31496.js"></script>
+    <link rel="stylesheet" href="/engagement/assets/index-2a8ec345.css">
   </head>
   <body>
     <header class="header">
@@ -43,12 +43,15 @@
   </div>
 </section>
 
-      <section class="features">
-  <div class="container">
-    <h2 class="features-title title">Що ми пропонуємо</h2>
-    <div class="features-wrap">
-      <!-- <div class="features-inner"> -->
-      <div class="features-bell"></div>
+      <section class="features" id="features">
+  <div class="features-parent container">
+    <div class="features-grid-1">
+      <h2 class="features-title title">Що ми пропонуємо</h2>
+    </div>
+    <div class="features-grid-2">
+      <img src="../img/pexels-khuynia.jpeg" class="features-bell" />
+    </div>
+    <div class="features-grid-3">
       <p class="features-text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate
         libero et velit interdum, ac aliquet odio mattis. Class aptent taciti
@@ -57,9 +60,10 @@
         efficitur neque. Ut diam quam, semper iaculis condimentum ac, vestibulum
         eu nisl.
       </p>
-      <!-- </div> -->
     </div>
-    <p class="features-art-text">Кажу тобі - так!</p>
+    <div class="features-grid-4">
+      <p class="features-art-text relative">Кажу тобі - так!</p>
+    </div>
   </div>
 </section>
 
@@ -106,7 +110,7 @@
   </div>
 </section>
 
-      <section class="exclusive slider-container">
+      <section class="exclusive slider-container" id="exclusive">
   <div class="container exclusive-container">
     <h2 class="exclusive-title title">Ексклюзивніі пропозиції</h2>
     <p class="exclusive-art-text">Я буду кохати тебе все життя!</p>
@@ -114,12 +118,14 @@
   </div>
 </section>
 
-      <section class="selections">
+      <section class="selections" id="selections">
   <div class="container">
-    <h2 class="selections-title title">Як обрати розмір каблучки</h2>
-    <div class="selections-wrap">
-      <div class="selections-bell"></div>
-      <div class="selections-inner">
+    <div class="parent">
+      <div class="div1">
+        <h2 class="selections-title title">Як обрати розмір каблучки</h2>
+      </div>
+      <div class="div2 selections-bell"></div>
+      <div class="div3 selections-inner">
         <p class="selections-text">
           Візми нитку та обгорни нею палець, для якого обираєшь каблучку.
         </p>
@@ -129,7 +135,9 @@
         <p class="selections-text">
           Переходь на <a href="#">ресурс</a> та визнач розмір каблучки.
         </p>
-        <a href="#choice" class="selections-btn btn">Обрати каблучку</a>
+      </div>
+      <div class="div4 selections-btn">
+        <a href="#choice" class="btn">Обрати каблучку</a>
       </div>
     </div>
   </div>
@@ -138,9 +146,51 @@
     </main>
     <footer class="footer">
   <div class="container">
-    <h2 class="icon-facebook" > </h2>
-    <h2 class="icon-whatsapp" > </h2>
-    <h2 class="icon-phone" > </h2>
+    <div class="social-container-wrap">
+      <nav class="footer-nav">
+        <ul class="footer-list">
+          <li class="footer-item">
+            <a href="#features" class="nav-link active"
+              ><h2>Що ми пропонуємо</h2></a
+            >
+          </li>
+          <li class="footer-item">
+            <a href="#choice" class="nav-link"><h2>Обрати каблучку</h2></a>
+          </li>
+          <li class="footer-item">
+            <a href="#exclusive" class="nav-link"
+              ><h2>Ексклюзивні пропозиції</h2></a
+            >
+          </li>
+          <li class="footer-item">
+            <a href="#selections" class="nav-link"
+              ><h2>Як обрати розмір каблучки</h2></a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div class="social-container">
+        <a href="#" class="ring"><i class="icon-ring3 icon-container"></i></a>
+        <a href="#" class="email"
+          ><i class="envelope-container icon-container"></i
+        ></a>
+        <a href="#" class="envelope"><i class="icon-container"></i></a>
+        <a href="#" class="codepen"><i class="icon-container"></i></a>
+        <a href="#" class="linkedin"><i class="icon-container"></i></a>
+        <a href="#" class="viber"><i class="icon-viber icon-container"></i></a>
+        <a href="#" class="instagram"
+          ><i class="icon-instagram icon-container"></i
+        ></a>
+        <a href="#" class="tiktok"><i class="icon-container"></i></a>
+        <a href="#" class="facebook"><i class="icon-container"></i></a>
+      </div>
+      <div class="footer-img">
+        <img src="../img/pexels-khuynia.jpeg" class="footer-bell" />
+      </div>
+    </div>
+  </div>
+
 </footer>
 
     <!-- <div id="app"></div> -->
