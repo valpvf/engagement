@@ -4,24 +4,24 @@ $('.ring').hover(function () {
 $('.facebook').hover(function () {
   $('.footer').toggleClass('color-facebook');
 });
-$('.googleplus').hover(function () {
-  $('.footer').toggleClass('color-googleplus');
+$('.email').hover(function () {
+  $('.footer').toggleClass('color-email');
 });
-$('.pinterest').hover(function () {
-  $('.footer').toggleClass('color-pinterest');
+$('.telegram').hover(function () {
+  $('.footer').toggleClass('color-telegram');
 });
-$('.dribbble').hover(function () {
-  $('.footer').toggleClass('color-dribbble');
+$('.phone').hover(function () {
+  $('.footer').toggleClass('color-phone');
 });
 $('.instagram').hover(function () {
   $('.footer').toggleClass('color-instagram');
 });
-$('.codepen').hover(function () {
-  $('.footer').toggleClass('color-codepen');
+$('.whatsapp').hover(function () {
+  $('.footer').toggleClass('color-whatsapp');
 });
 $('.viber').hover(function () {
   $('.footer').toggleClass('color-viber');
 });
-$('.linkedin').hover(function () {
-  $('.footer').toggleClass('color-linkedin');
+$('.tiktok').hover(function () {
+  $('.footer').toggleClass('color-tiktok');
 });

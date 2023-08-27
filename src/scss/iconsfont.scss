@@ -12,7 +12,7 @@
 [class*=' icon-']::before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icons' !important;
-  speak: never;
+  // speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -29,27 +29,27 @@
 }
 .icon-whatsapp:before {
   content: '\e900';
-  color: #66e066;
+  // color: #66e066;
 }
 .icon-facebook:before {
   content: '\e901';
-  color: #1877f2;
+  // color: #1877f2;
 }
 .icon-viber:before {
   content: '\e903';
-  color: #603a88;
+  // color: #603a88;
 }
 .icon-tiktok:before {
   content: '\e904';
-  color: #69c9d0;
+  // color: #69c9d0;
 }
 .icon-telegram:before {
   content: '\e906';
-  color: #1b92d1;
+  // color: #1b92d1;
 }
 .icon-instagram:before {
   content: '\e907';
-  color: #dd2a7b;
+  // color: #dd2a7b;
 }
 .icon-email:before {
   content: '\e90a';
