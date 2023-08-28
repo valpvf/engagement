@@ -53,23 +53,23 @@
 // .active {}
 
 .footer-img {
-  background-color: burlywood;
+  background-color: $color-primary;
 }
 .footer-bell {
   width: 310px;
   height: 200px;
   object-fit: cover;
   clip-path: polygon(
-    50% 0%,
-    95% 4%,
+    50% -10%,
+    95% 8%,
     100% 35%,
     100% 70%,
-    96% 97%,
-    50% 100%,
-    4% 96%,
+    96% 92%,
+    50% 110%,
+    4% 92%,
     0% 70%,
     0% 35%,
-    5% 4%
+    5% 8%
   );
 }
 .social-container {
@@ -227,14 +227,27 @@
 }
 
 .color-ring,
-.color-facebook,
-.color-telegram,
 .color-phone,
 .color-email,
-.color-instagram {
-  -webkit-transition: all 0.2s ease-in-out;
-  -moz-transition: all 0.2s ease-in-out;
-  -ms-transition: all 0.2s ease-in-out;
-  -o-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
+.color-telegram,
+.color-whatsapp,
+.color-viber,
+.color-instagram,
+.color-tiktok,
+.color-facebook {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.footer-gradient {
+  background: linear-gradient(
+      270deg,
+      rgba(63, 81, 181, 0) 0%,
+      rgba(0, 0, 0, 0.7) 80%
+    ),
+    linear-gradient(90deg, rgba(63, 81, 181, 0) 0%, rgba(0, 0, 0, 0.7) 80%),
+    radial-gradient(circle, rgba(63, 81, 181, 0) 0%, rgba(0, 0, 0, 1) 80%);
 }
