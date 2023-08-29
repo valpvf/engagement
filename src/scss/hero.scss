@@ -1,5 +1,6 @@
 @import 'normalize.css';
 @import 'variables.scss';
+
 .hero {
   background: url('../img/hero.jpg');
   background-attachment: scroll;
@@ -124,6 +125,7 @@
   transition: all 1s ease;
   inset: 0;
   --offset: 40%;
+  border-radius: 30px;
   backdrop-filter: blur(var(--blur));
   -webkit-backdrop-filter: blur(var(--blur));
   mask-image: linear-gradient(
