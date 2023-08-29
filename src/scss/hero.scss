@@ -69,7 +69,7 @@
       }
       &:nth-of-type(8) {
         --blur: 24px;
-        --x: 120%;
+        --x: 12%;
       }
     }
   }
@@ -124,7 +124,7 @@
   padding: 28px 70px;
   transition: all 1s ease;
   inset: 0;
-  --offset: 40%;
+  --offset: 80%;
   border-radius: 30px;
   backdrop-filter: blur(var(--blur));
   -webkit-backdrop-filter: blur(var(--blur));
@@ -164,6 +164,6 @@
   }
   &:nth-of-type(8) {
     --blur: 0px;
-    --x: 120%;
+    --x: 15%;
   }
 }
