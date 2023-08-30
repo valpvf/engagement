@@ -26,7 +26,7 @@
   height: 45vh;
   margin: auto;
   transition: all 0.3s ease;
-  transform: translateY(0px) rotateY(20deg) scale(1);
+  transform: translateY(0px) rotateY(30deg) scale(1);
   border-radius: 30px;
   background: linear-gradient(
     125deg,
@@ -37,7 +37,7 @@
     0 -10px 20px -5px rgba(0, 0, 0, 0.3) inset,
     0 150px 100px -80px rgba(0, 0, 0, 0.4);
   &:hover {
-    transform: translateY(0px) rotateY(-20deg) scale(1);
+    transform: translateY(0px) rotateY(0deg) scale(1);
     & .hero-box {
       &:nth-of-type(1) {
         --blur: 0px;
