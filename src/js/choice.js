@@ -1,35 +1,36 @@
-const buttonChoice = document.getElementById('buttonChoice');
-const priceRange = document.getElementById('priceRange');
-const buttonGet = document.getElementById('buttonGet');
-const priceText = document.getElementById('priceText');
+// Получите элементы DOM для работы с ними
+const priceText = document.querySelector('.priceText');
+const priceButton = document.querySelector('.choice-start-btn');
+const priceOptions = document.querySelectorAll('.price-option');
+const priceOptionsContainer = document.querySelector('.price-options');
 
-let isPriceRangeVisible = false;
+// Функция для отображения или скрытия списка ценовых диапазонов
+function togglePriceOptions() {
+  priceButton.classList.toggle('show');
+  priceOptionsContainer.classList.toggle('show');
+}
 
-buttonChoice.addEventListener('click', () => {
-  if (isPriceRangeVisible) {
-    priceRange.style.display = 'none';
-    isPriceRangeVisible = false;
-  } else {
-    priceRange.style.display = 'block';
-    priceRange.style.position = 'absolute';
-    priceRange.style.width = '30vw';
-    priceRange.style.height = '30vh';
-    priceRange.style.backgroundColor = 'green';
-    isPriceRangeVisible = true;
+// Функция для выбора ценового диапазона и обновления текста кнопки
+function selectPriceOption(option) {
+  const priceValue = option.textContent; // Получаем текст выбранного варианта
+  priceText.textContent = priceValue; // Обновляем текст кнопки
+  if (priceOptionsContainer.classList.contains('show')) {
+    priceOptionsContainer.classList.remove('show');
   }
-});
-priceRange.addEventListener('click', e => {
-  if (e.target.classList.contains('price-option')) {
-    priceText.textContent = e.target.textContent;
+}
 
-    buttonGet.disabled = false;
-    buttonGet.style.backgroundColor = 'black';
+// Добавьте слушатель события на кнопку для отображения списка при клике
+priceButton.addEventListener('click', togglePriceOptions);
 
-    priceRange.style.display = 'none';
-    isPriceRangeVisible = false;
-  }
+// Добавьте слушатели событий на каждый вариант ценового диапазона
+priceOptions.forEach(option => {
+  option.addEventListener('click', () => selectPriceOption(option));
 });
 
-buttonGet.addEventListener('click', () => {
-  alert('Выбран ценовой диапазон: ' + priceText.textContent);
+// Добавьте слушатель события на всю страницу, чтобы скрыть список при клике вне него
+document.addEventListener('click', event => {
+  if (!priceButton.contains(event.target) && event.target !== priceText) {
+    priceButton.classList.remove('show');
+  }
+  priceOptions.classList.toggle('hide');
 });
