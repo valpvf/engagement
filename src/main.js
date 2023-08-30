@@ -1,5 +1,6 @@
 import './js/slider.js';
 import './js/social-media.js';
+import './js/choice.js';
 import '/scss//iconsfont.scss';
 import '/scss/styles.scss';
 import '/scss/header.scss';
