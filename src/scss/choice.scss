@@ -73,7 +73,8 @@
   transform: translateY(-50%);
 }
 .price-options {
-  display: none;
+  opacity: 0;
+  visibility: hidden;
   position: absolute;
   width: 494px;
   padding: 16px 13px;
@@ -84,65 +85,11 @@
   font-size: 20px;
   line-height: 1.5;
   text-align: center;
-  -webkit-animation: scale-in-ver-center 0.5s alternate;
-  animation: scale-in-ver-center 0.5s alternate;
-}
-@-webkit-keyframes scale-in-ver-center {
-  0% {
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-    opacity: 1;
-  }
-}
-@keyframes scale-in-ver-center {
-  0% {
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-    opacity: 1;
-  }
-}
-.price-options.hide {
-  -webkit-animation: scale-out-ver-center 0.5s alternate;
-  animation: scale-out-ver-center 0.5s alternate;
-}
-
-@-webkit-keyframes scale-out-ver-center {
-  0% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    opacity: 0;
-  }
-}
-
-@keyframes scale-out-ver-center {
-  0% {
-    -webkit-transform: scaleY(1);
-    transform: scaleY(1);
-    opacity: 1;
-  }
-  100% {
-    -webkit-transform: scaleY(0);
-    transform: scaleY(0);
-    opacity: 0;
-  }
+  transition: opacity 0.5s, visibility 0.5s;
 }
 .show .price-options {
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 .choice-btn.btn {
   background-color: $color-grey;
