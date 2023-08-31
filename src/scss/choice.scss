@@ -85,7 +85,19 @@
   font-size: 20px;
   line-height: 1.5;
   text-align: center;
-  transition: opacity 0.5s, visibility 0.5s;
+  transition: opacity 0.8s, visibility 0.5s;
+}
+.price-option {
+  transition: color 2s ease 0.5s;
+}
+.price-option:hover {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  transition: 0.5s;
+  color: #901719;
+}
+.selected {
+  color: #901719;
 }
 .show .price-options {
   opacity: 1;
