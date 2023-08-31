@@ -1,3 +1,4 @@
+export let priceValue = '';
 // Получите элементы DOM для работы с ними
 const priceText = document.querySelector('.priceText');
 const priceButton = document.querySelector('.choice-start-btn');
@@ -12,7 +13,7 @@ function togglePriceOptions() {
 
 // Функция для выбора ценового диапазона и обновления текста кнопки
 function selectPriceOption(option) {
-  const priceValue = option.textContent; // Получаем текст выбранного варианта
+  priceValue = option.textContent; // Получаем текст выбранного варианта
   priceText.textContent = priceValue; // Обновляем текст кнопки
   if (priceOptionsContainer.classList.contains('show')) {
     priceOptionsContainer.classList.remove('show');
@@ -32,5 +33,5 @@ document.addEventListener('click', event => {
   if (!priceButton.contains(event.target) && event.target !== priceText) {
     priceButton.classList.remove('show');
   }
-  priceOptions.classList.toggle('hide');
+  priceOptions.classList?.toggle('hide');
 });

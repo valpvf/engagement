@@ -14,3 +14,18 @@ export const getDataApi = async () => {
   const res = await axios.get('', { params });
   return res.data;
 };
+
+let products = [];
+
+async function fetchProducts() {
+  try {
+    const response = await getDataApi();
+    products = response.products;
+  } catch (error) {
+    console.log(error);
+  }
+}
+fetchProducts();
+export function getProducts() {
+  return products;
+}

@@ -1,12 +1,17 @@
-import { getDataApi } from '../servises/productsApi.js';
+import { getDataApi, getProducts } from '../servises/productsApi.js';
+let mainData;
+const prod = getProducts();
+console.log('prod', prod);
 
 foo();
 
-async function foo() {
+export default async function foo() {
   try {
     const mainData = await getDataApi().then(res => res.products);
-
-    const images = mainData.map(el => el.mainImage);
+    // console.log('mainData', mainData);
+    const images = [...mainData]
+      .filter(el => el.uniquePrice > 0)
+      .map(el => el.mainImage);
 
     const totalSlides = images.length;
 
@@ -22,6 +27,7 @@ async function foo() {
     `;
       slider.insertAdjacentElement('afterbegin', slide);
     }
+    // return mainData;
   } catch (error) {
     console.log(error);
   } finally {
@@ -30,7 +36,7 @@ async function foo() {
         arrows: true,
         dots: true,
         adaptiveHeight: true,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         speed: 1000,
         easing: 'ease',
@@ -68,3 +74,5 @@ async function foo() {
     });
   }
 }
+let productstList = mainData;
+console.log('productstList', productstList);
