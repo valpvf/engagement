@@ -6,14 +6,14 @@
   background-attachment: scroll;
   // background: url(https://w.forfun.com/fetch/8a/8ac8511ec3a4b9ce00e6f8dc147d4528.jpeg);  background-position: center;
   background-size: cover;
-  & .container {
-    position: relative;
-    height: 100vh;
-    margin: 0;
-    padding-top: 290px;
-    padding-bottom: 100px;
-    perspective: 1000px;
-  }
+  // & .container {
+  position: relative;
+  height: 100vh;
+  margin: 0;
+  padding-top: 290px;
+  padding-bottom: 100px;
+  perspective: 1000px;
+  // }
 }
 
 .hero-cover {
@@ -22,8 +22,8 @@
   right: 0;
   bottom: 0;
   left: 0;
-  width: 42vw;
-  height: 22vw;
+  width: 55vw;
+  height: 30vw;
   margin: auto;
   transition: all 0.3s ease;
   transform: translateY(0px) rotateY(30deg) scale(1);
@@ -78,10 +78,10 @@
 .hero-title {
   margin: 0;
   margin-bottom: 24px;
-  color: $color-hero;
+  color: $hero;
   text-shadow: 1px 1px 0.4px goldenrod;
   font-family: Marianna;
-  font-size: 5.15vw;
+  font-size: 7.5vw;
   // font-size: 96px;
   &.gold {
     text-shadow: 0.5px 0.5px 5px goldenrod;
@@ -89,9 +89,9 @@
 }
 .hero-subtitle {
   margin-bottom: 24px;
-  color: $color-hero;
+  color: $hero;
   text-shadow: 0.2px 0.2px 0.2px goldenrod;
-  font-size: 2.15vw;
+  font-size: 3.15vw;
   // font-size: 40px;
   font-weight: 300;
   line-height: 1.5;
@@ -101,9 +101,9 @@
 }
 
 .hero-text {
-  color: $color-hero;
+  color: $hero;
   text-shadow: 0.2px 0.2px 0.2px goldenrod;
-  font-size: 1.3vw;
+  font-size: 1.9vw;
   // font-size: 24px;
   line-height: 1.5;
   &.gold {
@@ -114,7 +114,7 @@
 .hero-btn {
   position: relative;
   top: 53vh;
-  left: 22%;
+  left: 15%;
   margin: 0 auto;
 }
 

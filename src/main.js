@@ -13,6 +13,7 @@ import '/scss/products.scss';
 import '/scss/exclusive.scss';
 import '/scss/selections.scss';
 import '/scss/footer.scss';
+import '/scss/modal.scss';
 import '/scss/slick.scss';
 
 // import javascriptLogo from "../javascript.svg";

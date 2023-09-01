@@ -8,10 +8,10 @@ html {
 
 body {
   margin: 0 auto;
-  color: $color-primary;
+  color: $black;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.16;
+  font-size: 24px;
+  line-height: 1.5;
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -83,7 +83,7 @@ button {
 
 // a {
 //   font-weight: 500;
-//   color: $color-primary;
+//   color: $black;
 //   text-decoration: inherit;
 // }
 // a:hover {
