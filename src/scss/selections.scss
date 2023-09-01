@@ -34,8 +34,7 @@
   justify-self: end;
 }
 
-.selections-bell {
-}
+// .selections-bell {}
 
 .selections-inner {
   display: flex;
@@ -47,7 +46,7 @@
 .selections-text {
   width: 410px;
   height: auto;
-  color: $color-primary;
+  color: $black;
   font-size: 20px;
   line-height: 1.5;
   &:nth-child(2) {
@@ -61,5 +60,4 @@
   }
 }
 
-.selections-btn {
-}
+// .selections-btn {}

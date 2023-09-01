@@ -1,7 +1,16 @@
-$color-hero: #fbfbfb;
-$color-primary: #0a0d17;
-$color-btn: #f5f1ec;
-$color-grey: #6c6a68;
+$primary_red: #901719;
+$dark-red: #5e0f10;
+$red-20: #e9d1d1;
+$grey: #6c6a68;
+$black: #0a0d17;
+$white: #ffffff;
+$light: #f8f8f8;
+$light-grey: #a2a1a1;
+$hero: #fbfbfb;
+$btn: #f5f1ec;
+:root {
+  --tra: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 .container {
   width: 100%;
@@ -33,7 +42,7 @@ $color-grey: #6c6a68;
 }
 
 .title {
-  color: $color-primary;
+  color: $black;
   margin-bottom: 35px;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-size: 40px;
@@ -48,8 +57,8 @@ $color-grey: #6c6a68;
   justify-content: center;
   align-items: center;
   border-radius: 30px;
-  background-color: $color-primary;
-  color: $color-btn;
+  background-color: $black;
+  color: $btn;
   font-family: Montserrat;
   font-size: 24px;
   font-weight: 500;

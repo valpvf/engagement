@@ -23,7 +23,7 @@ async function foo() {
       const slide = document.createElement('div');
       slide.classList.add('slider__item');
       slide.innerHTML = `
-        <img src="${image.mainImage}" alt="${image.name}" data-exclusive='${image}'height="324">
+        <img src="${image.mainImage}" alt="${image.name}" data-exclusive='${image}'>
     `;
       slider.insertAdjacentElement('afterbegin', slide);
     }
@@ -34,7 +34,7 @@ async function foo() {
       $('.slider').slick({
         arrows: true,
         dots: true,
-        adaptiveHeight: true,
+        adaptiveHeight: false,
         slidesToShow: 4,
         slidesToScroll: 1,
         speed: 1000,
@@ -51,7 +51,7 @@ async function foo() {
         //Перемещение мышкой и пальцем
         draggable: true,
         swipe: true,
-        centerMode: true,
+        centerMode: false,
         responsive: [
           {
             breakpoint: 768,
