@@ -1,3 +1,6 @@
+import { renderProducts } from './products';
+
+export let priceValue = '';
 // Получите элементы DOM для работы с ними
 const priceText = document.querySelector('.priceText');
 const priceButton = document.querySelector('.choice-start-btn');
@@ -15,8 +18,10 @@ let selectedPrice = ''; // Глобальная переменная для хр
 
 function selectPriceOption(option) {
   const priceValue = option.textContent;
+  const numberValue = option.dataset.options;
   priceText.textContent = priceValue;
   selectedPrice = priceValue; // Обновляем значение глобальной переменной
+  renderProducts(numberValue);
   if (priceOptionsContainer.classList.contains('show')) {
     priceOptionsContainer.classList.remove('show');
   }

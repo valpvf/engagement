@@ -1,12 +1,17 @@
 import { getDataApi } from '../servises/productsApi.js';
 
+export function getProducts(products) {
+  window.prod = products;
+  return window.products;
+}
+
 foo();
 
 async function foo() {
   try {
-    const mainData = await getDataApi().then(res => res.products);
-
-    const images = mainData.map(el => el.mainImage);
+    const products = await getDataApi().then(res => res.products);
+    getProducts(products);
+    const images = [...products].filter(el => el.uniquePrice > 0);
 
     const totalSlides = images.length;
 
@@ -14,11 +19,11 @@ async function foo() {
     slidesToShow = Math.max(slidesToShow, 4);
 
     const slider = document.querySelector('.slider');
-    for (let i = 0; i < totalSlides; i++) {
+    for (const image of images) {
       const slide = document.createElement('div');
       slide.classList.add('slider__item');
       slide.innerHTML = `
-        <img src="${images[i]}" alt="Image ${i + 1}" height="324">
+        <img src="${image.mainImage}" alt="${image.name}" data-exclusive='${image}'height="324">
     `;
       slider.insertAdjacentElement('afterbegin', slide);
     }
@@ -30,7 +35,7 @@ async function foo() {
         arrows: true,
         dots: true,
         adaptiveHeight: true,
-        slidesToShow: 3,
+        slidesToShow: 4,
         slidesToScroll: 1,
         speed: 1000,
         easing: 'ease',
