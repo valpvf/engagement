@@ -83,18 +83,41 @@
   border: 1px solid $grey;
   border-radius: 30px;
   font-size: 20px;
+  text-shadow: 0px 3px 7px $color-grey;
   line-height: 1.5;
   text-align: center;
   transition: opacity 0.8s, visibility 0.5s;
 }
 .price-option {
+  position: relative;
   transition: color 2s ease 0.5s;
+}
+.price-option::before {
+  content: '\2666';
+  font-family: Montserrat;
+  font-size: 10px;
+  margin-right: 35px;
+  display: none;
+}
+.price-option::after {
+  content: '\2666';
+  font-family: Montserrat;
+  font-size: 10px;
+  margin-left: 35px;
+  display: none;
+}
+.price-option:hover::before {
+  display: inline-block;
+}
+.price-option:hover::after {
+  display: inline-block;
 }
 .price-option:hover {
   -webkit-transform: scale(1.1);
   transform: scale(1.1);
   transition: 0.5s;
   color: #901719;
+  text-shadow: 0px 0px 1px #901719, 0px 3px 7px $color-grey;
 }
 .selected {
   color: #901719;
