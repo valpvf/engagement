@@ -3,7 +3,7 @@
 
 .products {
   & .container {
-    padding: 14px 32px;
+    padding: 14px 0;
   }
 }
 .products-cover {
@@ -17,7 +17,8 @@
   flex-direction: column;
   width: 280px;
   padding: 18px;
-  border: solid #ccc;
+  margin-bottom: 40px;
+  border: 0.1px solid #ccc;
 }
 
 .product-img {

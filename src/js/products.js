@@ -11,13 +11,13 @@ export const renderProducts = numberValue => {
     const ring = document.createElement('div');
     ring.classList.add('products-card');
     ring.innerHTML = `
-        <img src="${card.mainImage}" alt="${card.name}" height="324" class="product-img">
+        <img src="${card.mainImage}" alt="${
+      card.name
+    }" height="324" class="product-img">
         <h3 class="product-name">${card.name}</h3>
         <p class="product-text">${card.metalCharacteristics}</p>
-        <p class="product-price">${card.price}</p>
+        <p class="product-price">${card.price + '.00 грн.'}</p>
     `;
     productContainer.insertAdjacentElement('afterbegin', ring);
   }
-
-  console.log('priceValue', priceValue);
 };
