@@ -16,8 +16,8 @@
       href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"
     />
     
-    <script type="module" crossorigin src="/engagement/assets/index-4d9fd7e6.js"></script>
-    <link rel="stylesheet" href="/engagement/assets/index-9c96d0b5.css">
+    <script type="module" crossorigin src="/engagement/assets/index-8506c88a.js"></script>
+    <link rel="stylesheet" href="/engagement/assets/index-cb6f768c.css">
   </head>
   <body>
     <header class="header">
@@ -33,27 +33,27 @@
 
     <main>
       <section class="hero">
-  <div class="container">
-    <div class="hero-cover">
-      <span class="hero-box"></span>
-      <span class="hero-box"></span>
-      <span class="hero-box"></span>
-      <span class="hero-box"></span>
-      <span class="hero-box"></span>
-      <span class="hero-box"></span>
-      <span class="hero-box">
-        <h1 class="hero-title gold">Ваша каблучка</h1>
-        <p class="hero-subtitle gold">До ідеального освідчення</p>
-        <p class="hero-text gold">Якій вона скаже так!</p></span
-      >
-      <span class="hero-box">
-        <h1 class="hero-title">Ваша каблучка.</h1>
-        <p class="hero-subtitle">До ідеального освідчення</p>
-        <p class="hero-text">Якій вона скаже так!</p></span
-      >
-    </div>
-    <a href="#choice" class="hero-btn btn">Оберіть каблучку</a>
+  <!-- <div class="container"> -->
+  <div class="hero-cover">
+    <span class="hero-box"></span>
+    <span class="hero-box"></span>
+    <span class="hero-box"></span>
+    <span class="hero-box"></span>
+    <span class="hero-box"></span>
+    <span class="hero-box"></span>
+    <span class="hero-box">
+      <h1 class="hero-title gold">Ваша каблучка</h1>
+      <p class="hero-subtitle gold">До ідеального освідчення</p>
+      <p class="hero-text gold">Якій вона скаже так!</p></span
+    >
+    <span class="hero-box">
+      <h1 class="hero-title">Ваша каблучка.</h1>
+      <p class="hero-subtitle">До ідеального освідчення</p>
+      <p class="hero-text">Якій вона скаже так!</p></span
+    >
   </div>
+  <a href="#choice" class="hero-btn btn">Оберіть каблучку</a>
+  <!-- </div> -->
 </section>
 
 <!-- <br />Оберіть каблучку.
@@ -86,8 +86,8 @@
       <section class="choice" id="choice">
   <div class="container">
     <div class="choice-grid">
-      <div class="choice-title"><h2 class="title">Обрати каблучку</h2></div>
       <div class="choice-description">
+        <div class="choice-title"><h2 class="title">Обрати каблучку</h2></div>
         <p class="choice-text">Обирай ціну та тисни “Обрати каблучку”</p>
       </div>
       <div class="choice-action-start">
@@ -218,6 +218,95 @@
     </div>
   </div>
 </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button class="modal-close" data-modal-close type="button">
+      <!-- <svg class="modal-close-svg" width="8px" height="8px">
+        <use href="./images/icons.svg#icon-close-black"></use>
+      </svg> -->
+    </button>
+    <p class="modal-title">Leave your contacts and we will call you back</p>
+    <form class="modal-form">
+      <label class="modal-input-text">
+        <span>Name *</span>
+        <span class="modal-input-wrap">
+          <input
+            class="modal-input"
+            name="user-name"
+            type="text"
+            placeholder="John Kirby"
+            minlength="2"
+            required
+          />
+          <!-- <svg class="modal-icon" width="18" height="24">
+            <use href="./images/icons.svg#icon-person"></use>
+          </svg> -->
+        </span>
+      </label>
+      <label class="modal-input-text">
+        <span>Phone *</span>
+        <span class="modal-input-wrap">
+          <input
+            class="modal-input"
+            name="user-tel"
+            type="tel"
+            title="+380 (99) 111-22-33"
+            placeholder="+11 (000) 111-11-11"
+            required
+          />
+          <!-- <svg class="modal-icon" width="18" height="24">
+            <use href="./images/icons.svg#icon-phone"></use>
+          </svg> -->
+        </span>
+      </label>
+      <label class="modal-input-text">
+        <span>Email *</span>
+        <span class="modal-input-wrap">
+          <input
+            class="modal-input"
+            name="user-email"
+            type="email"
+            placeholder="info@devstudio.com"
+            required
+          />
+          <!-- <svg class="modal-icon" width="18" height="24">
+            <use href="./images/icons.svg#icon-email"></use>
+          </svg> -->
+        </span>
+      </label>
+      <label class="modal-input-text">
+        <span>Comment</span>
+        <textarea
+          class="modal-input"
+          id="user-comment"
+          name="user-comment"
+          placeholder="Text input"
+        ></textarea>
+      </label>
+      <div class="modal-field">
+        <input
+          class="modal-check visually-hidden"
+          id="policy"
+          name="policy"
+          type="checkbox"
+          value="true"
+          required
+        />
+        <label class="modal-text" for="policy">
+          <span>
+            <!-- <svg class="icon-check" width="10" height="8">
+              <use href="./images/icons.svg#icon-check"></use>
+            </svg> -->
+          </span>
+          I accept the terms and conditions of the
+          <a href="#"> Privacy Policy</a>
+        </label>
+      </div>
+      <button class="modal-btn btn" type="submit">Send</button>
+    </form>
+  </div>
+</div>
 
     <!-- <div id="app"></div> -->
 
