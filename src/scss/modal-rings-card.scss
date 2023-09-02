@@ -1,0 +1,59 @@
+.modal-content {
+  display: flex;
+  gap: 128px;
+}
+.rings-card-photo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  & img {
+    width: 304px;
+    height: 304px;
+    &:first-child {
+      width: 630px;
+      height: 520px;
+    }
+  }
+}
+.rings-card-box {
+  display: grid;
+  flex-direction: column;
+}
+
+.rings-card-title {
+  color: #000000;
+  font-size: 32px;
+}
+
+// .rings-card-options {}
+
+.rings-card-options-name {
+  font-size: 24px;
+}
+
+.rings-card-options-descr {
+  color: $grey;
+}
+.rings-card-description {
+  color: $black;
+  font-size: 24px;
+}
+.rings-card-btn {
+  display: flex;
+  width: 521px;
+  padding: 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid var(--Black, #0a0d17);
+  background: #fff;
+}
+.rings-card-consultation {
+  font-size: 24px;
+}
+.rings-card-arttext {
+  color: #000000;
+  font-family: Marianna;
+  font-size: 140px;
+  line-height: normal;
+}

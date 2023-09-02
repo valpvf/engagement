@@ -12,15 +12,16 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 408px;
-  height: 584px;
-  padding: 72px 24px 24px;
+  min-width: 320px;
+  min-height: 320px;
+  padding: 50px;
   transition: transform var(--tra);
   transform: translate(-50%, -50%) scaleY(1);
   border-radius: 4px;
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+  z-index: 4;
 }
 
 .is-hidden {
@@ -37,10 +38,10 @@
   position: absolute;
   display: block;
   cursor: pointer;
-  top: 24px;
-  right: 24px;
-  width: 24px;
-  height: 24px;
+  top: 17px;
+  right: 17px;
+  // width: 24px;
+  // height: 24px;
   transition: color var(--tra), background-color var(--tra);
   color: #000000;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -52,13 +53,15 @@
   position: absolute;
   top: 50%;
   left: 50%;
+  width: 20px;
+  height: 20px;
   transform: translate(-50%, -50%);
-  fill: currentColor;
+  fill: rgba(10, 13, 23, 0.5);
 }
 
-.modal-close:is(:hover, :focus) {
-  color: var(--primary-bg-clr);
-  background-color: var(--pressed-state-clr);
+.modal-close-svg use:is(:hover, :focus) {
+  fill: #5e0f10;
+  background-color: #5e0f10;
 }
 
 .modal-title {

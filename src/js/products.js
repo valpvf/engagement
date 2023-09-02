@@ -10,6 +10,7 @@ export const renderProducts = numberValue => {
   for (const card of renderList) {
     const ring = document.createElement('div');
     ring.classList.add('products-card');
+    ring.dataset.modalOpen = '';
     ring.innerHTML = `
         <img src="${card.mainImage}" alt="${
       card.name
