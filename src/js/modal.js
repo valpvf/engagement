@@ -1,3 +1,5 @@
+import { renderRingsCard } from './modal-rings-card.js';
+
 export function modalWindow() {
   const refs = {
     openModalBtn: document.querySelectorAll('[data-modal-open]'),
@@ -6,14 +8,16 @@ export function modalWindow() {
   };
 
   for (const el of refs.openModalBtn) {
-    // for (let i = 0; i < refs.openModalBtn.length; i++) {
     el.addEventListener('click', toggleModal);
   }
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleModal(e) {
-    console.log(e.target.dataset);
-    console.log(e.target.dataset.exclusive);
+    const ringCard = window.prod.filter(el => el.id === e.target.dataset.id);
+    renderRingsCard(ringCard[0]);
+    // if (e.target !== e.currentTarget) {
+    //   refs.modal.classList.toggle('is-hidden');
+    // }
     refs.modal.classList.toggle('is-hidden');
   }
 }

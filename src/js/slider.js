@@ -6,9 +6,7 @@ export function getProducts(products) {
   return window.products;
 }
 
-foo();
-
-async function foo() {
+(async () => {
   try {
     const products = await getDataApi().then(res => res.products);
     getProducts(products);
@@ -24,7 +22,7 @@ async function foo() {
       const slide = document.createElement('div');
       slide.classList.add('slider__item');
       slide.innerHTML = `
-        <img src="${image.mainImage}" alt="${image.name}" data-exclusive=${image} data-modal-open>
+        <img src="${image.mainImage}" alt="${image.name}" data-id=${image.id} data-modal-open>
     `;
       slider.insertAdjacentElement('afterbegin', slide);
     }
@@ -74,4 +72,4 @@ async function foo() {
       });
     });
   }
-}
+})();
