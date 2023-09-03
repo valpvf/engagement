@@ -1,0 +1,119 @@
+@import 'normalize.css';
+@import 'variables.scss';
+
+.modal-order {
+  text-align: center;
+}
+.modal-order-title {
+  color: #000000;
+  font-family: Marianna;
+  font-size: 100px;
+  line-height: normal;
+}
+
+.modal-order-form {
+  display: flex;
+  flex-direction: column;
+  gap: 33px;
+}
+
+.modal-input {
+  width: 486px;
+  height: 72px;
+  padding: 18px 12px;
+  border-radius: 20px;
+  color: $grey;
+  font-size: 20px;
+  border: 1px solid var(--Grey, #6c6a68);
+  background: #fff;
+  outline: transparent;
+}
+
+.modal-input:is(:focus, :hover) {
+  border-color: var(--primary-brand-clr);
+}
+
+.modal-input-text {
+  display: block;
+  margin: 0;
+}
+
+// .modal-input-text > span {
+//   display: block;
+//   margin-bottom: 4px;
+//   letter-spacing: 0.04em;
+//   color: var(--subtle-text-clr);
+//   font-size: 12px;
+//   line-height: 1.33;
+// }
+
+.modal-input::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+}
+
+.modal-input-wrap {
+  position: relative;
+  margin: 0;
+}
+
+.modal-icon {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translateY(-50%);
+  fill: var(--dark-clr);
+}
+
+.modal-input:focus + .modal-icon {
+  fill: var(--primary-brand-clr);
+}
+
+.modal-check {
+  width: 20px;
+  height: 20px;
+}
+
+.modal-text {
+  display: flex;
+  position: relative;
+  align-items: baseline;
+  left: -18px;
+  margin-top: 0;
+  margin-bottom: 4px;
+  transition: backgraund-color var(--tra), border var(--tra), fill var(--tra);
+  letter-spacing: 0.04em;
+  color: $black;
+  font-size: 20px;
+  line-height: 1.33;
+  gap: 3px;
+}
+
+.modal-field {
+  padding-left: 35px;
+  display: flex;
+  align-items: center;
+}
+
+.modal-check:checked + .modal-text span {
+  border: none;
+  background-color: $primaryRed;
+  left: -50px;
+  fill: $red;
+}
+
+.modal-check:is(:hover, :focus) + .modal-text span {
+  border: solid var(--pressed-state-clr);
+}
+
+.modal-btn {
+  display: flex;
+  width: auto;
+  padding: 24px 36px;
+  justify-content: center;
+  align-items: center;
+  color: ffffff;
+  font-size: 24px;
+  font-weight: 500;
+  border-radius: 30px;
+  background: $black;
+}
