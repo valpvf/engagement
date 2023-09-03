@@ -10,14 +10,26 @@ export const renderProducts = numberValue => {
   for (const card of renderList) {
     const ring = document.createElement('div');
     ring.classList.add('products-card');
-    ring.innerHTML = `
-        <img src="${card.mainImage}" alt="${
-      card.name
-    }" height="324" class="product-img">
-        <h3 class="product-name">${card.name}</h3>
-        <p class="product-text">${card.metalCharacteristics}</p>
-        <p class="product-price">${card.price + '.00 грн.'}</p>
+    if (card.uniqueProposal > 0) {
+      ring.innerHTML = `
+      <div class="exclusive-label">Exclusive</div>
+      <img src="${card.mainImage}" alt="${
+        card.name
+      }" height="324" class="product-img">
+      <h3 class="product-name">${card.name}</h3>
+      <p class="product-text">${card.metalCharacteristics}</p>
+      <p class="product-price highlighted">${card.price + ' грн.'}</p>
     `;
+    } else {
+      ring.innerHTML = `
+      <img src="${card.mainImage}" alt="${
+        card.name
+      }" height="324" class="product-img">
+      <h3 class="product-name">${card.name}</h3>
+      <p class="product-text">${card.metalCharacteristics}</p>
+      <p class="product-price">${card.price + ' грн.'}</p>
+    `;
+    }
     productContainer.insertAdjacentElement('afterbegin', ring);
   }
 };
