@@ -17,6 +17,7 @@ import '/scss/footer.scss';
 import '/scss/modal.scss';
 import '/scss/slick.scss';
 import '/scss/modal-rings-card.scss';
+// import '/js/modal-rings-card.js';
 
 // import javascriptLogo from "../javascript.svg";
 // import viteLogo from "../public/favicon/vite.svg";
