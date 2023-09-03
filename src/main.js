@@ -3,6 +3,7 @@ import './js/products.js';
 import './js/slider.js';
 import './js/social-media.js';
 import './js/choice.js';
+import './js/modal.js';
 import '/scss/iconsfont.scss';
 import '/scss/styles.scss';
 import '/scss/header.scss';
@@ -15,6 +16,7 @@ import '/scss/selections.scss';
 import '/scss/footer.scss';
 import '/scss/modal.scss';
 import '/scss/slick.scss';
+import '/scss/modal-rings-card.scss';
 
 // import javascriptLogo from "../javascript.svg";
 // import viteLogo from "../public/favicon/vite.svg";
