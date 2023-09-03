@@ -4,7 +4,7 @@ export function renderRingsCard(ringCard) {
   console.log('ringCard', ringCard);
   const modalContainer = document.querySelector('.modal');
   const modalContant = document.querySelector('.modal-content');
-  if (modalContant) modalContant.remove();
+  if (modalContant !== null) modalContant.remove();
   console.log('modalContant', modalContant);
   const card = document.createElement('div');
   card.classList.add('modal-content');

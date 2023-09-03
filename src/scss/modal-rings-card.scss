@@ -20,8 +20,21 @@
       width: 560px;
       height: 513px;
     }
+    &:hover:not(:first-child) {
+      transform: scale(2.07);
+      position: relative;
+      border: 2px solid $primaryRed;
+      bottom: 145px;
+      &:nth-child(2) {
+        left: 145px;
+      }
+      &:last-child {
+        right: 145px;
+      }
+    }
   }
 }
+
 .rings-card-box {
   display: grid;
   flex-direction: column;
@@ -46,17 +59,17 @@
 }
 .rings-card-options-text.met::before {
   color: $black;
-  margin-right: 24px;
+  margin-right: 28px;
   content: 'Метал:';
 }
 .rings-card-options-text.st::before {
   color: $black;
-  margin-right: 24px;
+  margin-right: 28px;
   content: 'Камінь:';
 }
 .rings-card-options-text.wd::before {
   color: $black;
-  margin-right: 24px;
+  margin-right: 28px;
   content: 'Розмір:';
 }
 
@@ -76,7 +89,11 @@
   border-radius: 20px;
   border: 1px solid $black;
   background: $white;
+  &:hover {
+    background-color: $red;
+  }
 }
+
 .rings-card-consultation {
   font-size: 24px;
   text-align: right;
