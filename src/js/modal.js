@@ -1,4 +1,5 @@
 import { renderRingsCard } from './modal-rings-card.js';
+import { fittingModal } from './modal-orders.js';
 
 export function modalWindow() {
   const refs = {
@@ -14,7 +15,9 @@ export function modalWindow() {
 
   function toggleModal(e) {
     const ringCard = window.prod.filter(el => el.id === e.target.dataset.id);
-    renderRingsCard(ringCard[0]);
+    renderRingsCard(ringCard);
+    if (ringCard) fittingModal(ringCard);
+    // console.log('refs', refs);
     // if (e.target !== e.currentTarget) {
     //   refs.modal.classList.toggle('is-hidden');
     // }

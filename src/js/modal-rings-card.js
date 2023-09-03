@@ -1,11 +1,10 @@
-import { modalWindow } from './modal';
+// import { modalWindow } from './modal';
 
-export function renderRingsCard(ringCard) {
-  console.log('ringCard', ringCard);
-  const modalContainer = document.querySelector('.modal');
-  const modalContant = document.querySelector('.modal-content');
-  if (modalContant !== null) modalContant.remove();
-  console.log('modalContant', modalContant);
+export function renderRingsCard([ringCard]) {
+  // console.log('ringCard', ringCard);
+  const modalContainer = document.querySelector('.modal-wrap');
+  const oldContant = document.querySelector('.modal-wrap div');
+  oldContant?.remove();
   const card = document.createElement('div');
   card.classList.add('modal-content');
   card.innerHTML = `
@@ -32,5 +31,6 @@ ${ringCard?.stoneCharacteristics}
         <p class="rings-card-arttext">Час діяти!</p>
     </div>
     `;
-  modalContainer.insertAdjacentElement('beforeend', card);
+
+  modalContainer.insertAdjacentElement('afterbegin', card);
 }
