@@ -14,21 +14,16 @@ export function renderRingsCard([ringCard]) {
         <img src=${ringCard?.thirdImage} alt="" />
       </div>
       <div class="rings-card-box">
-        <h3 class="rings-card-title">${ringCard?.name}</h3>
+        <h2 class="rings-card-title">${ringCard?.name}</h2>
         <div class="rings-card-options">
-          <p class="rings-card-options-text met">
-       ${ringCard?.metalCharacteristics}
-          </p>
-          <p class="rings-card-options-text st">
-${ringCard?.stoneCharacteristics}
-          </p>
-          <p class="rings-card-options-text wd">${ringCard?.width}
-          </p>
+          <p class="rings-card-options-text met">${ringCard?.metalCharacteristics}</p>
+          <p class="rings-card-options-text st">${ringCard?.stoneCharacteristics}</p>
+          <p class="rings-card-options-text wd">${ringCard?.width}</p>
       </div>
         <p class="rings-card-description">${ringCard?.productDescription}</p>
         <button class="rings-card-btn">Записатися на примірку</button
-        ><a href="" class="rings-card-consultation">консультація</a>
-        <p class="rings-card-arttext">Час діяти!</p>
+        ><button class="rings-card-consultation">Консультація</button>
+        <h3 class="rings-card-arttext">Час діяти!</h3>
     </div>
     `;
 
