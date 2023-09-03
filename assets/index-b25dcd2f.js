@@ -11,7 +11,7 @@
       <h3 class="product-name">${s.name}</h3>
       <p class="product-text">${s.metalCharacteristics}</p>
       <p class="product-price">${s.price+" грн."}</p>
-    `),r.insertAdjacentElement("afterbegin",o)}};function cn(e){console.log("ringCard",e);const t=document.querySelector(".modal"),n=document.querySelector(".modal-content");n&&n.remove(),console.log("modalContant",n);const r=document.createElement("div");r.classList.add("modal-content"),r.innerHTML=`
+    `),r.insertAdjacentElement("afterbegin",o)}};function cn(e){console.log("ringCard",e);const t=document.querySelector(".modal"),n=document.querySelector(".modal-content");n!==null&&n.remove(),console.log("modalContant",n);const r=document.createElement("div");r.classList.add("modal-content"),r.innerHTML=`
       <div class="rings-card-photo">
         <img src=${e==null?void 0:e.mainImage} alt=${e==null?void 0:e.name} />
         <img src=${e==null?void 0:e.secondImage} alt="" />
