@@ -11,6 +11,7 @@ export const renderProducts = numberValue => {
     const ring = document.createElement('div');
     ring.classList.add('products-card');
     if (card.uniqueProposal > 0) {
+      ring.dataset.modalOpen = '';
       ring.innerHTML = `
       <div class="exclusive-label">Exclusive</div>
       <img src="${card.mainImage}" alt="${
@@ -21,6 +22,7 @@ export const renderProducts = numberValue => {
       <p class="product-price highlighted">${card.price + ' грн.'}</p>
     `;
     } else {
+      ring.dataset.modalOpen = '';
       ring.innerHTML = `
       <img src="${card.mainImage}" alt="${
         card.name
