@@ -16,10 +16,14 @@ export function renderRingsCard([ringCard]) {
       <div class="rings-card-box">
         <h2 class="rings-card-title">${ringCard?.name}</h2>
         <div class="rings-card-options">
-          <p class="rings-card-options-text met">${ringCard?.metalCharacteristics}</p>
-          <p class="rings-card-options-text st">${ringCard?.stoneCharacteristics}</p>
+          <p class="rings-card-options-text met">${
+            ringCard?.metalCharacteristics
+          }</p>
+          <p class="rings-card-options-text st">${
+            ringCard?.stoneCharacteristics
+          }</p>
           <p class="rings-card-options-text wd">${ringCard?.width}</p>
-          <p class="rinds-card-price">${ringCard?.price} грн.</p>  
+          <p class="rinds-card-price">${ringCard?.price.toLocaleString()} грн.</p>  
         </div>
         <p class="rings-card-description">${ringCard?.productDescription}</p>
         <button class="rings-card-btn">Записатися на примірку</button

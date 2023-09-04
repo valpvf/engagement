@@ -19,7 +19,7 @@ export function fittingModal([ringCard]) {
             <span class="modal-input-wrap">
               <input
                 class="modal-input"
-                name="user-name"
+                name="name"
                 type="text"
                 placeholder="І’мя"
                 minlength="2"
@@ -35,7 +35,7 @@ export function fittingModal([ringCard]) {
               <input
                 class="modal-input"
                 id="user-width"
-                name="user-width"
+                name="width"
                 placeholder="Розмір каблучки"
               ></input>
             </label>
@@ -62,7 +62,7 @@ export function fittingModal([ringCard]) {
             <span class="modal-input-wrap">
               <input
                 class="modal-input"
-                name="user-tel"
+                name="tel"
                 type="tel"
                 title="+380 (99) 111-22-33"
                 placeholder="+380"
@@ -77,7 +77,7 @@ export function fittingModal([ringCard]) {
             <span class="modal-input-wrap">
               <input
                 class="modal-input"
-                name="user-email"
+                name="email"
                 type="email"
                 placeholder="Email"
                 required
@@ -101,7 +101,7 @@ export function fittingModal([ringCard]) {
             <span class="modal-input-wrap">
               <input
                 class="modal-input"
-                name="user-name"
+                name="name"
                 type="text"
                 placeholder="І’мя"
                 minlength="2"
@@ -116,7 +116,7 @@ export function fittingModal([ringCard]) {
             <span class="modal-input-wrap">
               <input
                 class="modal-input"
-                name="user-tel"
+                name="tel"
                 type="tel"
                 title="+380 (99) 111-22-33"
                 placeholder="+380"
