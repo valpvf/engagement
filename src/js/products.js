@@ -19,7 +19,10 @@ export const renderProducts = numberValue => {
       }" height="324" class="product-img">
       <h3 class="product-name">${card.name}</h3>
       <p class="product-text">${card.metalCharacteristics}</p>
-      <p class="product-price highlighted">${card.price + ' грн.'}</p>
+      <span class="product-price-inner">
+        <span class="product-price highlighted">${card.price + ' грн.'}</span>
+        <span class="product-old-price">${card.uniquePrice + ' грн.'}</span>
+      </span>
     `;
     } else {
       ring.dataset.modalOpen = '';

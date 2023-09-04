@@ -57,11 +57,23 @@
   border: 1px solid #901719;
   border-radius: 30px;
 }
-.product-price {
+
+.product-price-inner {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 5px;
+}
+.product-price,
+.product-old-price {
   font-size: 20px;
   font-weight: 700;
   line-height: 1.5;
 }
 .highlighted {
   color: #901719;
+}
+
+.product-old-price {
+  color: $grey;
+  text-decoration: line-through;
 }

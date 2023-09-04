@@ -19,12 +19,13 @@ export function renderRingsCard([ringCard]) {
           <p class="rings-card-options-text met">${ringCard?.metalCharacteristics}</p>
           <p class="rings-card-options-text st">${ringCard?.stoneCharacteristics}</p>
           <p class="rings-card-options-text wd">${ringCard?.width}</p>
-      </div>
+          <p class="rinds-card-price">${ringCard?.price} грн.</p>  
+        </div>
         <p class="rings-card-description">${ringCard?.productDescription}</p>
         <button class="rings-card-btn">Записатися на примірку</button
         ><button class="rings-card-consultation">Консультація</button>
         <h3 class="rings-card-arttext">Час діяти!</h3>
-    </div>
+      </div>
     `;
 
   modalContainer.insertAdjacentElement('afterbegin', card);
