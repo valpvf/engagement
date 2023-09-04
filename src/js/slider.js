@@ -10,7 +10,7 @@ export function getProducts(products) {
   try {
     const products = await getDataApi().then(res => res.products);
     getProducts(products);
-    const images = [...products].filter(el => el.uniquePrice > 0);
+    const images = [...products].filter(el => el.oldPrice > 0);
 
     const totalSlides = images.length;
 

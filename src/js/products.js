@@ -4,7 +4,7 @@ export const renderProducts = numberValue => {
   let renderList =
     numberValue < 5
       ? [...productsList].filter(el => el.priceCategory == numberValue)
-      : [...productsList].filter(el => el.uniquePrice > 0);
+      : [...productsList].filter(el => el.oldPrice > 0);
   const productContainer = document.querySelector('.products-cover');
   productContainer.innerHTML = '';
   for (const card of renderList) {
@@ -20,8 +20,12 @@ export const renderProducts = numberValue => {
       <h3 class="product-name">${card.name}</h3>
       <p class="product-text">${card.metalCharacteristics}</p>
       <span class="product-price-inner">
-        <span class="product-price highlighted">${card.price + ' грн.'}</span>
-        <span class="product-old-price">${card.uniquePrice + ' грн.'}</span>
+        <span class="product-price highlighted">${
+          card.price.toLocaleString() + ' грн.'
+        }</span>
+        <span class="product-old-price">${
+          card.oldPrice.toLocaleString() + ' грн.'
+        }</span>
       </span>
     `;
     } else {
@@ -32,7 +36,7 @@ export const renderProducts = numberValue => {
       }" height="324" class="product-img">
       <h3 class="product-name">${card.name}</h3>
       <p class="product-text">${card.metalCharacteristics}</p>
-      <p class="product-price">${card.price + ' грн.'}</p>
+      <p class="product-price">${card.price.toLocaleString() + ' грн.'}</p>
     `;
     }
     productContainer.insertAdjacentElement('afterbegin', ring);
