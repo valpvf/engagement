@@ -1,3 +1,5 @@
+import { postDataApi } from '../servises/productsApi';
+
 export function fittingModal([ringCard]) {
   const fitting = document.querySelector('.rings-card-btn');
   const consultation = document.querySelector('.rings-card-consultation');
@@ -5,16 +7,16 @@ export function fittingModal([ringCard]) {
   consultation.addEventListener('click', renderFittingModal);
 
   function renderFittingModal(e) {
-    console.log('e.target', e.target.classList.value);
+    const typeForm = e.target.classList.value;
     const modalContainer = document.querySelector('.modal-wrap');
     const oldContant = document.querySelector('.modal-wrap div');
     oldContant?.remove();
-    if (e.target.classList.value === 'rings-card-btn') {
+    if (typeForm === 'rings-card-btn') {
       const fitting = document.createElement('div');
       fitting.classList.add('modal-order');
       fitting.innerHTML = `
         <h2 class="modal-order-title">Запис на примірку</h2>
-        <form class="modal-order-form">
+        <form method="post" class="modal-order-form">
           <label class="modal-input-text">
             <span class="modal-input-wrap">
               <input
@@ -34,7 +36,7 @@ export function fittingModal([ringCard]) {
             <label class="modal-input-text">
               <input
                 class="modal-input"
-                id="user-width"
+                id="width"
                 name="width"
                 placeholder="Розмір каблучки"
               ></input>
@@ -45,8 +47,7 @@ export function fittingModal([ringCard]) {
                 id="nowidth"
                 name="nowidth"
                 type="checkbox"
-                value="true"
-                required
+                // value="true"
               />
               <label class="modal-text" for="nowidth">
                 <span>
@@ -96,7 +97,7 @@ export function fittingModal([ringCard]) {
       consultation.classList.add('modal-order');
       consultation.innerHTML = `
         <h2 class="modal-order-title">Зворотній дзвінок</h2>
-        <form class="modal-order-form">
+        <form method="post" class="modal-order-form">
           <label class="modal-input-text">
             <span class="modal-input-wrap">
               <input
@@ -111,7 +112,7 @@ export function fittingModal([ringCard]) {
                 <use href="./images/icons.svg#icon-person"></use>
               </svg>
             </span>
-          </label>          
+          </label>
           <label class="modal-input-text">
             <span class="modal-input-wrap">
               <input
@@ -126,11 +127,90 @@ export function fittingModal([ringCard]) {
                 <use href="./images/icons.svg#icon-phone"></use>
               </svg>
             </span>
-          </label>          
+          </label>
           <button class="modal-btn btn" type="submit">Передзвоніть мені</button>
         </form>
       `;
       modalContainer.insertAdjacentElement('afterbegin', consultation);
     }
+
+    // находим форму в документе
+    const form = document.querySelector('.modal-order-form');
+
+    // вспомогательная функция проверки заполненности формы
+    function isFilled(details) {
+      const { name, tel } = details;
+      if (!name) return false;
+      if (!tel) return false;
+      if (typeForm === 'rings-card-btn') {
+        const { email, width, nowidth } = details;
+        if (!email) return false;
+        if (!width || !nowidth) return false;
+        console.log(email, width, nowidth);
+      }
+      return true;
+    }
+
+    // навешиваем обработчик на отправку формы
+    form.addEventListener('submit', async e => {
+      // отменяем действие по умолчанию
+      e.preventDefault();
+
+      // получаем ссылки на элементы формы
+      const name = document.querySelector('[name=name]');
+      const tel = document.querySelector('[name=tel]');
+      // собираем данные из элементов формы
+      let details = {
+        name: name.value.trim(),
+        tel: tel.value.trim(),
+      };
+      if (typeForm === 'rings-card-btn') {
+        const email = document.querySelector('[name=email]');
+        const width = document.querySelector('[name=width]');
+        const nowidth = document.querySelector('[name=nowidth]');
+        details.email = email.value.trim();
+        details.width = width.value.trim();
+        details.nowidth = nowidth.value;
+      }
+      // console.log('details', details);
+
+      // если поля не заполнены - прекращаем обработку
+      if (!isFilled(details)) return;
+
+      // подготавливаем данные для отправки
+      let formBody = [];
+      for (let property in details) {
+        // кодируем названия и значения параметров
+        let encodedKey = encodeURIComponent(property);
+        let encodedValue = encodeURIComponent(details[property]);
+        formBody.push(encodedKey + '=' + encodedValue);
+      }
+
+      // склеиваем параметры в одну строку
+      formBody = formBody.join('&');
+
+      // выполняем отправку данных в Google Apps
+      try {
+        const result = await postDataApi(formBody);
+        //   .then(res =>
+        //   console.log(res)
+        // );
+        console.log('result', result);
+        //   .catch(err => alert('Ошибка!'));
+        // .then((res) => console.log(res));
+
+        if (result.type === 'success') {
+          name.value = '';
+          tel.value = '';
+          email.value = '';
+          width.value = '';
+          nowidth.value = false;
+          alert('Спасибо за заявку!');
+        }
+        if (result.type === 'error') {
+          alert(`Ошибка( ${result.errors}`);
+        }
+      } catch (error) {}
+    });
   }
 }
