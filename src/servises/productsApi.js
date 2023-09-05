@@ -61,3 +61,17 @@ export const getDataApi = async () => {
   const res = await axios.get('', { params });
   return res.data;
 };
+
+export const postDataApi = async formBody => {
+  try {
+    const res = await axios.post('', formBody, {
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded;charset=UTF-8',
+      },
+      // CORS не потрібно вказувати окремо, Axios автоматично опрацьовує CORS
+    });
+    return res.data;
+  } catch (error) {
+    alert('Помилка!');
+  }
+};
