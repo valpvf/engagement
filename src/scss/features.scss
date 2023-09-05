@@ -1,12 +1,21 @@
 @import 'normalize.css';
 @import 'variables.scss';
 
+.features {
+  background-image: url('./img/features-ring.png');
+  background-repeat: no-repeat;
+  background-size: 243px 436px;
+  background-position: 81% 3%;
+}
 .features-parent {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 100px auto 100px;
   grid-column-gap: 50px;
   grid-row-gap: 32px;
+}
+.features-parent .container {
+  padding-top: 68px 32px 80px;
 }
 .features-title {
   margin-top: 84px;

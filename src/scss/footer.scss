@@ -57,24 +57,32 @@
 // .active {}
 
 .footer-img {
-  background-color: $black;
+  width: 410px;
+  height: 266px;
+  background-image: url(./img/happy-wedding.jpeg);
+  filter: opacity(50%);
+  border-radius: 50%;
+  -webkit-box-shadow: 40px 40px 76px -60px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 40px 40px 76px -60px rgba(34, 60, 80, 0.2);
+  box-shadow: 40px 40px 76px -60px rgba(34, 60, 80, 0.2);
 }
-.footer-bell {
-  width: 310px;
-  height: 200px;
-  object-fit: cover;
-  clip-path: polygon(
-    50% -10%,
-    95% 8%,
-    100% 35%,
-    100% 70%,
-    96% 92%,
-    50% 110%,
-    4% 92%,
-    0% 70%,
-    0% 35%,
-    5% 8%
-  );
+.footer-img:hover {
+  filter: opacity(100%);
+  border-radius: 20px;
+  scale: 1.1;
+  transition: 3s;
+  animation: footer-img 5s ease 0s 1 normal forwards;
+}
+@keyframes footer-img {
+  0% {
+    background-position: right bottom;
+    background-size: 100%;
+  }
+
+  100% {
+    background-position: right bottom;
+    background-size: 150%;
+  }
 }
 .social-container {
   width: 252px;

@@ -4,6 +4,10 @@
 .selections {
   background: #fbfbfb;
   padding-bottom: 84px;
+  background-image: url('./img/ring2\ 1.png');
+  background-size: 362px 347px;
+  background-repeat: no-repeat;
+  background-position: 57% 120%;
 }
 .parent {
   display: grid;
@@ -23,6 +27,10 @@
 .div2 {
   grid-area: 2 / 1 / 4 / 2;
   background-color: burlywood;
+  background-image: url(./img/ring-size.jpg);
+  -webkit-box-shadow: 40px 40px 76px -60px rgba(34, 60, 80, 0.2);
+  -moz-box-shadow: 40px 40px 76px -60px rgba(34, 60, 80, 0.2);
+  box-shadow: 40px 40px 76px -60px rgba(34, 60, 80, 0.2);
 }
 .div3 {
   grid-area: 2 / 2 / 3 / 3;
