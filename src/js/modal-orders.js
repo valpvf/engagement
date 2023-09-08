@@ -47,7 +47,7 @@ export function fittingModal([ringCard]) {
                 id="nowidth"
                 name="nowidth"
                 type="checkbox"
-                // value="true"
+                value="не знаю"
               />
               <label class="modal-text" for="nowidth">
                 <span>
@@ -142,11 +142,12 @@ export function fittingModal([ringCard]) {
       const { name, tel } = details;
       if (!name) return false;
       if (!tel) return false;
-      if (typeForm === 'rings-card-btn') {
+      console.log('typeForm', typeForm);
+      if (typeForm == 'rings-card-btn') {
         const { email, width, nowidth } = details;
-        if (!email) return false;
-        if (!width || !nowidth) return false;
         console.log(email, width, nowidth);
+        if (!email) return false;
+        // if (!nowidth || !width) return false;
       }
       return true;
     }
@@ -164,13 +165,17 @@ export function fittingModal([ringCard]) {
         name: name.value.trim(),
         tel: tel.value.trim(),
       };
+      let email, width, nowidth;
       if (typeForm === 'rings-card-btn') {
-        const email = document.querySelector('[name=email]');
-        const width = document.querySelector('[name=width]');
-        const nowidth = document.querySelector('[name=nowidth]');
+        email = document.querySelector('[name=email]');
+        width = document.querySelector('[name=width]');
+        nowidth = document.querySelector('[name=nowidth]');
         details.email = email.value.trim();
-        details.width = width.value.trim();
-        details.nowidth = nowidth.value;
+        if (!width.value.trim()) {
+          details.nowidth = nowidth.value;
+        } else {
+          details.width = width.value.trim();
+        }
       }
       // console.log('details', details);
 
@@ -195,7 +200,7 @@ export function fittingModal([ringCard]) {
         //   .then(res =>
         //   console.log(res)
         // );
-        console.log('result', result);
+        console.log('result', result.type);
         //   .catch(err => alert('Ошибка!'));
         // .then((res) => console.log(res));
 
@@ -208,7 +213,7 @@ export function fittingModal([ringCard]) {
           alert('Спасибо за заявку!');
         }
         if (result.type === 'error') {
-          alert(`Ошибка( ${result.errors}`);
+          alert(`Сталась помилка. Спробуйте ще раз( ${result.errors}`);
         }
       } catch (error) {}
     });
