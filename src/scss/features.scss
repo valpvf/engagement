@@ -107,15 +107,13 @@
 }
 
 .features-art-text {
+  position: relative;
+  bottom: 55px;
+  left: 87px;
   color: #6c6a68;
   font-family: Marianna;
   font-size: 140px;
   font-weight: 400;
-  text-align: right;
+  text-align: center;
   opacity: 0.2;
-}
-.relative {
-  position: relative;
-  top: -60px;
-  left: -180px;
 }

@@ -1,12 +1,12 @@
 @import 'normalize.css';
 @import 'variables.scss';
 
-.container {
-  padding: 16px;
-}
 .footer {
   background: $black;
   color: #fff;
+  & .container {
+    padding: 10px;
+  }
 }
 
 .social-container-wrap {
@@ -28,7 +28,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   line-height: 1.5;
   color: #fff;
   list-style: none;
@@ -51,6 +50,10 @@
 .nav-link {
   & h2 {
     font-size: 20px;
+    text-shadow: 1px 1px 4px rgba(222, 184, 135, 0.7);
+    &:hover {
+      color: #deb887;
+    }
   }
 }
 
@@ -201,12 +204,12 @@
       border: none;
     }
   }
-  & .whatsapp:hover,
-  .email:hover,
-  .tiktok:hover {
-    color: rgba(0, 0, 0, 0.8) !important;
-    border-color: rgba(0, 0, 0, 0.8);
-  }
+  // & .whatsapp:hover,
+  // .email:hover,
+  // .tiktok:hover {
+  //   color: rgba(0, 0, 0, 0.8) !important;
+  //   border-color: rgba(0, 0, 0, 0.8);
+  // }
 
   & .ring:hover {
     color: #deb887 !important;

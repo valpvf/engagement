@@ -1,0 +1,20 @@
+@import 'normalize.css';
+@import 'variables.scss';
+
+.modal-end-art {
+  color: $black;
+  font-family: Marianna;
+  font-size: 140px;
+  line-height: 1;
+  margin-bottom: 60px;
+}
+
+.modal-end-title {
+  font-size: 40px;
+  font-weight: 300;
+  margin-bottom: 24px;
+}
+
+.modal-end-text {
+  font-size: 20px;
+}

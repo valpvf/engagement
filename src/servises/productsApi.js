@@ -48,7 +48,7 @@ import axios from 'axios';
 const baseUrl =
   'https://script.google.com/macros/s/AKfycbyjtK8aeeVRpPDIvaO6kFScMxCO9aF8V21TUyWJ7DAmgi6rYRTd1nXj774CeE-iURAv/exec';
 
-axios.defaults.baseURL = baseUrl;
+https: axios.defaults.baseURL = baseUrl;
 const params = {
   // authorization:
   //   'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY0YzY3ZmUwOTk0ODA1NDMwMWNiNzVjNCIsImlhdCI6MTY5MDc5OTA4OCwiZXhwIjoxNjkwODg1NDg4fQ.icq2DWGjZjkzqmKkQYSiGOyZGFgCd95SjmT8JkID5QE',

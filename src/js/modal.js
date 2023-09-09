@@ -17,7 +17,6 @@ export function modalWindow() {
     const ringCard = window.prod.filter(el => el.id === e.target.dataset.id);
     renderRingsCard(ringCard);
     if (ringCard) fittingModal(ringCard);
-    // console.log('refs', refs);
     // if (e.target !== e.currentTarget) {
     //   refs.modal.classList.toggle('is-hidden');
     // }
