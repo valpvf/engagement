@@ -1,4 +1,5 @@
 import { postDataApi } from '../servises/productsApi';
+import { modalEnd } from './modal-end';
 
 export function fittingModal([ringCard]) {
   const fitting = document.querySelector('.rings-card-btn');
@@ -6,15 +7,17 @@ export function fittingModal([ringCard]) {
   fitting.addEventListener('click', renderFittingModal);
   consultation.addEventListener('click', renderFittingModal);
 
+  let order, consultant;
+
   function renderFittingModal(e) {
     const typeForm = e.target.classList.value;
     const modalContainer = document.querySelector('.modal-wrap');
     const oldContant = document.querySelector('.modal-wrap div');
     oldContant?.remove();
     if (typeForm === 'rings-card-btn') {
-      const fitting = document.createElement('div');
-      fitting.classList.add('modal-order');
-      fitting.innerHTML = `
+      order = document.createElement('div');
+      order.classList.add('modal-order');
+      order.innerHTML = `
         <h2 class="modal-order-title">Запис на примірку</h2>
         <form method="post" class="modal-order-form">
           <label class="modal-input-text">
@@ -91,11 +94,11 @@ export function fittingModal([ringCard]) {
           <button class="modal-btn btn" type="submit">Записатись на примірку</button>
         </form>
       `;
-      modalContainer.insertAdjacentElement('afterbegin', fitting);
+      modalContainer.insertAdjacentElement('afterbegin', order);
     } else {
-      const consultation = document.createElement('div');
-      consultation.classList.add('modal-order');
-      consultation.innerHTML = `
+      consultant = document.createElement('div');
+      consultant.classList.add('modal-order');
+      consultant.innerHTML = `
         <h2 class="modal-order-title">Зворотній дзвінок</h2>
         <form method="post" class="modal-order-form">
           <label class="modal-input-text">
@@ -131,7 +134,7 @@ export function fittingModal([ringCard]) {
           <button class="modal-btn btn" type="submit">Передзвоніть мені</button>
         </form>
       `;
-      modalContainer.insertAdjacentElement('afterbegin', consultation);
+      modalContainer.insertAdjacentElement('afterbegin', consultant);
     }
 
     // находим форму в документе
@@ -142,12 +145,11 @@ export function fittingModal([ringCard]) {
       const { name, tel } = details;
       if (!name) return false;
       if (!tel) return false;
-      console.log('typeForm', typeForm);
       if (typeForm == 'rings-card-btn') {
         const { email, width, nowidth } = details;
         console.log(email, width, nowidth);
         if (!email) return false;
-        // if (!nowidth || !width) return false;
+        // if (nowidth || width) return false;
       }
       return true;
     }
@@ -164,6 +166,9 @@ export function fittingModal([ringCard]) {
       let details = {
         name: name.value.trim(),
         tel: tel.value.trim(),
+        id: ringCard.id,
+        photo: ringCard.mainImage,
+        price: ringCard.price,
       };
       let email, width, nowidth;
       if (typeForm === 'rings-card-btn') {
@@ -177,7 +182,6 @@ export function fittingModal([ringCard]) {
           details.width = width.value.trim();
         }
       }
-      // console.log('details', details);
 
       // если поля не заполнены - прекращаем обработку
       if (!isFilled(details)) return;
@@ -207,10 +211,18 @@ export function fittingModal([ringCard]) {
         if (result.type === 'success') {
           name.value = '';
           tel.value = '';
-          email.value = '';
-          width.value = '';
-          nowidth.value = false;
-          alert('Спасибо за заявку!');
+          if (typeForm === 'rings-card-btn') {
+            email.value = '';
+            width.value = '';
+            nowidth.value = false;
+          }
+          // alert('Спасибо за заявку!');
+          if (typeForm === 'rings-card-btn') {
+            order?.remove();
+          } else {
+            consultant?.remove();
+          }
+          modalEnd(typeForm);
         }
         if (result.type === 'error') {
           alert(`Сталась помилка. Спробуйте ще раз( ${result.errors}`);
