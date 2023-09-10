@@ -1,34 +1,25 @@
 @import 'normalize.css';
 @import 'variables.scss';
 
+.slider {
+  z-index: 1;
+}
 .exclusive {
   & .exclusive-container {
     position: relative;
     padding-top: 26px;
-    padding-bottom: 90px;
+    padding-bottom: 110px;
   }
 }
 .exclusive-art-text {
   position: absolute;
-  bottom: -55px;
-  // left: 10%;
-  // margin-top: 8px;
+  bottom: -10px;
   color: #6c6a68;
-  text-align: center;
+  line-height: 1;
   font-family: Marianna;
-  font-size: 125px;
+  font-size: 120px;
   opacity: 0.2;
 }
-
-// .exclusive-title {
-//   margin-top: 90px;
-// }
-
-// .exclusive-slider {
-//   width: 100%;
-//   height: 430px;
-//   border: solid #6c6a68;
-// }
 
 .exclusive-img {
   max-height: 400px !important;

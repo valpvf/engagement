@@ -24,13 +24,13 @@
   border-radius: 20px;
   color: $grey;
   font-size: 20px;
-  border: 1px solid var(--Grey, #6c6a68);
+  border: 1px solid $lightGrey;
   background: #fff;
   outline: transparent;
 }
 
 .modal-input:is(:focus, :hover) {
-  border-color: var(--primary-brand-clr);
+  border-color: $primaryRed;
 }
 
 .modal-input-text {
@@ -56,16 +56,18 @@
   margin: 0;
 }
 
-.modal-icon {
+.modal-order-icon {
   position: absolute;
   top: 50%;
-  left: 16px;
+  right: 40px;
+  width: 40px;
+  height: 40px;
   transform: translateY(-50%);
-  fill: var(--dark-clr);
+  fill: rgba(117, 117, 117, 0.5);
 }
 
 .modal-input:focus + .modal-icon {
-  fill: var(--primary-brand-clr);
+  fill: $primaryRed;
 }
 
 .modal-check {
@@ -102,7 +104,7 @@
 }
 
 .modal-check:is(:hover, :focus) + .modal-text span {
-  border: solid var(--pressed-state-clr);
+  border: solid $primaryRed;
 }
 
 .modal-btn {

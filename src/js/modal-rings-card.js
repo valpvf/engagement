@@ -22,7 +22,7 @@ export function renderRingsCard([ringCard]) {
           <p class="rings-card-options-text st">${
             ringCard?.stoneCharacteristics
           }</p>
-          <p class="rings-card-options-text wd">${ringCard?.width}</p>
+          <p class="rings-card-options-text wd">${ringCard?.size}</p>
           <p class="rinds-card-price">${ringCard?.price.toLocaleString()} грн.</p>  
         </div>
         <p class="rings-card-description">${ringCard?.productDescription}</p>

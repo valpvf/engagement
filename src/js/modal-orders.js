@@ -30,8 +30,8 @@ export function fittingModal([ringCard]) {
                 minlength="2"
                 required
               />
-              <svg class="modal-icon" width="18" height="24">
-                <use href="./images/icons.svg#icon-person"></use>
+              <svg class="modal-order-icon">
+                <use href="./img/sprite.svg#icon-person"></use>
               </svg>
             </span>
           </label>
@@ -55,7 +55,7 @@ export function fittingModal([ringCard]) {
               <label class="modal-text" for="nowidth">
                 <span>
                   <svg class="icon-check" width="10" height="8">
-                    <use href="./images/icons.svg#icon-check"></use>
+                    <use href="./img/sprite.svg#icon-check"></use>
                   </svg>
                 </span>
                 не знаю розміра
@@ -72,8 +72,8 @@ export function fittingModal([ringCard]) {
                 placeholder="+380"
                 required
               />
-              <svg class="modal-icon" width="18" height="24">
-                <use href="./images/icons.svg#icon-phone"></use>
+              <svg class="modal-order-icon">
+                <use href="./img/sprite.svg#icon-phone"></use>
               </svg>
             </span>
           </label>
@@ -86,8 +86,8 @@ export function fittingModal([ringCard]) {
                 placeholder="Email"
                 required
               />
-              <svg class="modal-icon" width="18" height="24">
-                <use href="./images/icons.svg#icon-email"></use>
+              <svg class="modal-order-icon">
+                <use href="./img/sprite.svg#icon-email"></use>
               </svg>
             </span>
           </label>
@@ -111,8 +111,8 @@ export function fittingModal([ringCard]) {
                 minlength="2"
                 required
               />
-              <svg class="modal-icon" width="18" height="24">
-                <use href="./images/icons.svg#icon-person"></use>
+              <svg class="modal-order-icon">
+                <use href="./img/sprite.svg#icon-person"></use>
               </svg>
             </span>
           </label>
@@ -126,8 +126,8 @@ export function fittingModal([ringCard]) {
                 placeholder="+380"
                 required
               />
-              <svg class="modal-icon" width="18" height="24">
-                <use href="./images/icons.svg#icon-phone"></use>
+              <svg class="modal-order-icon">
+                <use href="./img/sprite.svg#icon-phone"></use>
               </svg>
             </span>
           </label>
