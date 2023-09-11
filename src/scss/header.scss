@@ -20,14 +20,58 @@
   gap: 40px;
   align-items: center;
   justify-content: end;
+  transition: all var(--tra);
+}
+
+.heder-menu {
+  max-height: 0;
+  font-size: 0;
+  visibility: hidden;
+  &:hover {
+    border-bottom: 2px solid $darkRed;
+  }
+  &:active {
+    background: $red;
+    border-bottom: 2px solid $darkRed;
+  }
 }
 
 .header-tlf {
   color: $black;
   font-size: 24px;
   line-height: 1.5;
+  &:hover {
+    border-bottom: 2px solid $darkRed;
+  }
+}
+
+#check-burger {
+  display: none;
+}
+
+#check-burger:checked {
+  & ~ .heder-menu {
+    visibility: visible;
+    max-height: 40px;
+    color: $black;
+    font-size: 20px;
+    margin-right: 59px;
+  }
+  & ~ .header-tlf {
+    font-size: 20px;
+  }
+  & ~ label {
+    display: none;
+  }
 }
 
 .header-icon {
+  display: block;
   stroke: $black;
+  cursor: pointer;
+}
+label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
 }
