@@ -1,4 +1,4 @@
-import { postDataApi } from '../servises/productsApi';
+import { postDataApi } from '../../servises/productsApi';
 import { modalEnd } from './modal-end';
 
 export function fittingModal([ringCard]) {

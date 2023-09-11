@@ -1,4 +1,4 @@
-import { modalWindow } from './modal';
+import { modalWindow } from './modal/modal';
 
 export const renderProducts = numberValue => {
   const productsList = window.prod;

@@ -1,5 +1,5 @@
 import { getDataApi } from '../servises/productsApi.js';
-import { modalWindow } from './modal.js';
+import { modalWindow } from './modal/modal.js';
 
 export function getProducts(products) {
   window.prod = products;
