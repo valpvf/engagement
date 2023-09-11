@@ -1,3 +1,6 @@
+@import 'normalize.css';
+@import './../variables.scss';
+
 .backdrop {
   position: fixed;
   top: 0;
@@ -43,10 +46,10 @@
   // width: 24px;
   // height: 24px;
   transition: color var(--tra), background-color var(--tra);
-  color: #000000;
+  color: $white;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
-  background: var(--accent-clr);
+  background: transparent;
 }
 
 .modal-close-svg {
@@ -60,8 +63,8 @@
 }
 
 .modal-close-svg use:is(:hover, :focus) {
-  fill: #5e0f10;
-  background-color: #5e0f10;
+  fill: $darkRed;
+  background-color: $darkRed;
 }
 
 .modal-title {
