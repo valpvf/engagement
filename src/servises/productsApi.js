@@ -72,6 +72,6 @@ export const postDataApi = async formBody => {
     });
     return res.data;
   } catch (error) {
-    alert('Помилка!');
+    console.error(error);
   }
 };

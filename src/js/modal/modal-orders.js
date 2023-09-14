@@ -200,6 +200,10 @@ export function fittingModal([ringCard]) {
 
       // выполняем отправку данных в Google Apps
       try {
+        let mask = document.querySelector('.mask');
+        window.addEventListener('load', () => {
+          mask.classList.add('loader-hide');
+        });
         const result = await postDataApi(formBody);
         //   .then(res =>
         //   console.log(res)
@@ -225,9 +229,13 @@ export function fittingModal([ringCard]) {
           modalEnd(typeForm);
         }
         if (result.type === 'error') {
-          alert(`Сталась помилка. Спробуйте ще раз( ${result.errors}`);
+          console.log(`Сталась помилка( ${result.errors}`);
         }
-      } catch (error) {}
+      } catch (error) {
+        window.location.href = './404.html';
+      } finally {
+        mask.remove();
+      }
     });
   }
 }
