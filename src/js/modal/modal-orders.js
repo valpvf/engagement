@@ -33,6 +33,9 @@ export function fittingModal([ringCard]) {
               <svg class="modal-order-icon">
                 <use href="./img/sprite.svg#icon-person"></use>
               </svg>
+              <span class="modal-error">
+                Будь ласка, введіть своє ім'я
+              </span>
             </span>
           </label>
           <div>
@@ -70,11 +73,15 @@ export function fittingModal([ringCard]) {
                 type="tel"
                 title="+380 (99) 111-22-33"
                 placeholder="+380"
+                minlength="10"
                 required
               />
               <svg class="modal-order-icon">
                 <use href="./img/sprite.svg#icon-phone"></use>
               </svg>
+              <span class="modal-error">
+                Будь ласка, введіть свій номер телефону
+              </span>
             </span>
           </label>
           <label class="modal-input-text">
@@ -89,6 +96,9 @@ export function fittingModal([ringCard]) {
               <svg class="modal-order-icon">
                 <use href="./img/sprite.svg#icon-email"></use>
               </svg>
+              <span class="modal-error">
+                Будь ласка, введіть свою електронну адресу
+              </span>
             </span>
           </label>
           <button class="modal-btn btn" type="submit">Записатись на примірку</button>
@@ -110,10 +120,13 @@ export function fittingModal([ringCard]) {
                 placeholder="І’мя"
                 minlength="2"
                 required
-              />
-              <svg class="modal-order-icon">
+                />
+                <svg class="modal-order-icon">
                 <use href="./img/sprite.svg#icon-person"></use>
               </svg>
+              <span class="modal-error">
+                Будь ласка, введіть своє ім'я
+              </span>
             </span>
           </label>
           <label class="modal-input-text">
@@ -124,11 +137,15 @@ export function fittingModal([ringCard]) {
                 type="tel"
                 title="+380 (99) 111-22-33"
                 placeholder="+380"
+                minlength="10"
                 required
               />
               <svg class="modal-order-icon">
                 <use href="./img/sprite.svg#icon-phone"></use>
               </svg>
+              <span class="modal-error">
+                Будь ласка, введіть свій номер телефону
+              </span>
             </span>
           </label>
           <button class="modal-btn btn" type="submit">Передзвоніть мені</button>
@@ -200,6 +217,10 @@ export function fittingModal([ringCard]) {
 
       // выполняем отправку данных в Google Apps
       try {
+        let mask = document.querySelector('.mask');
+        window.addEventListener('load', () => {
+          mask.classList.add('loader-hide');
+        });
         const result = await postDataApi(formBody);
         //   .then(res =>
         //   console.log(res)
@@ -225,9 +246,13 @@ export function fittingModal([ringCard]) {
           modalEnd(typeForm);
         }
         if (result.type === 'error') {
-          alert(`Сталась помилка. Спробуйте ще раз( ${result.errors}`);
+          console.log(`Сталась помилка( ${result.errors}`);
         }
-      } catch (error) {}
+      } catch (error) {
+        window.location.href = './404.html';
+      } finally {
+        mask.remove();
+      }
     });
   }
 }

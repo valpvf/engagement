@@ -28,7 +28,7 @@ export function getProducts(products) {
     }
     modalWindow();
   } catch (error) {
-    console.log(error);
+    window.location.href = './404.html';
   } finally {
     $(document).ready(function () {
       $('.slider').slick({

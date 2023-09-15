@@ -17,7 +17,6 @@ export function modalWindow() {
     const ringCard = window.prod.filter(
       el => el.id === e.currentTarget.dataset.id
     );
-    console.log('ringCard', ringCard);
     renderRingsCard(ringCard);
     if (ringCard) fittingModal(ringCard);
     // if (e.target !== e.currentTarget) {

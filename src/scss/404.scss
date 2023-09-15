@@ -1,0 +1,44 @@
+@import 'normalize.css';
+@import 'variables.scss';
+@import 'internal-fonts.scss';
+
+.s404 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+.s404-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: $black;
+}
+
+.s404-4 {
+  width: 215px;
+  height: 250px;
+}
+
+.s404-ring {
+  position: relative;
+  bottom: 25px;
+  width: 333px;
+  height: 455px;
+  margin-right: 60px;
+}
+
+.s404-title {
+  font-size: 30px;
+}
+
+.s404-btn {
+  padding: 16px;
+  font-size: 20px;
+  &:hover {
+    background-color: $primaryRed;
+  }
+}
