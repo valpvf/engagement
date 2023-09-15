@@ -6,6 +6,7 @@
     padding: 14px 0;
   }
 }
+
 .products-cover {
   display: flex;
   flex-wrap: wrap;
@@ -15,47 +16,42 @@
 .products-card {
   display: flex;
   flex-direction: column;
-  width: 289px;
-  height: 476px;
-  padding: 18px 0;
-  margin-bottom: 40px;
+  margin-bottom: 13px;
   -webkit-box-shadow: 40px 40px 76px -60px rgba(34, 60, 80, 0.2);
   -moz-box-shadow: 40px 40px 76px -60px rgba(34, 60, 80, 0.2);
   box-shadow: 40px 40px 76px -60px rgba(34, 60, 80, 0.2);
-  // border: 0.1px solid rgba(0, 0, 0, 0.25);
 }
 
 .product-img {
+  width: 288px;
+  height: 342px;
+  margin-bottom: 8px;
   text-align: center;
-  width: 289px;
-  height: 344px;
-  margin-bottom: 16px;
-  // border: solid #ccc;
+  object-fit: cover;
 }
 
 .product-name {
-  padding-bottom: 4px;
-  color: $black;
-  font-size: 20px;
-  line-height: 1.5;
+  margin-bottom: 4px;
+  font-size: 16px;
 }
 
 .product-text {
+  display: none;
+  margin-bottom: 4px;
   color: $grey;
-  font-size: 20px;
-  line-height: 1.5;
 }
+
 .exclusive-label {
   position: absolute;
   margin: 10px 30px;
   padding: 0 15px;
-  color: #901719;
-  font-weight: 700;
-  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   transform: rotate(-15deg);
   transform-origin: top right;
+  color: #901719;
   border: 1px solid #901719;
   border-radius: 30px;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-weight: 700;
 }
 
 .product-price-inner {
@@ -63,17 +59,65 @@
   justify-content: space-between;
   padding-right: 5px;
 }
+
 .product-price,
 .product-old-price {
-  font-size: 23px;
+  font-size: 16px;
   font-weight: 700;
-  line-height: 1.5;
 }
+
 .highlighted {
   color: #901719;
 }
 
 .product-old-price {
-  color: $grey;
   text-decoration: line-through;
+  color: $grey;
+}
+
+@media screen and (min-width: 768px) {
+  .products-card {
+    margin-bottom: 16px;
+    padding: 8px;
+  }
+  .product-img {
+    width: 330px;
+    height: 360px;
+    margin-bottom: 12px;
+  }
+  .product-name {
+    font-size: 18px;
+    line-height: 1.7;
+  }
+  .product-text {
+    display: block;
+    font-size: 16px;
+  }
+  .product-price,
+  .product-old-price {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .products-card {
+    margin-bottom: 40px;
+    padding: 18px 0;
+  }
+  .product-img {
+    width: 289px;
+    height: 344px;
+    margin-bottom: 16px;
+  }
+  .product-name {
+    font-size: 20px;
+    line-height: 1.5;
+  }
+  .product-text {
+    font-size: 20px;
+  }
+  .product-price,
+  .product-old-price {
+    font-size: 23px;
+  }
 }
