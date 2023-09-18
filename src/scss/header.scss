@@ -22,10 +22,20 @@
   transition: all var(--tra);
   &:has(#check-burger:checked) {
     justify-content: space-between;
-    flex-direction: column;
+    flex-flow: column;
     & > .header-tlf {
       display: none;
     }
+
+    & > .header-close {
+      display: block;
+    }
+  }
+  & label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
   }
 }
 
@@ -59,7 +69,7 @@
     max-height: 40px;
     color: $black;
     font-size: 17px;
-    margin-right: auto;
+    margin-right: auto; // только для 320
     margin-bottom: 8px;
     line-height: 1.6;
   }
@@ -69,15 +79,25 @@
 }
 
 .header-icon {
+  position: relative;
   width: 32px;
+  right: 0;
   display: block;
   stroke: $black;
   cursor: pointer;
 }
-label {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
+
+.header-close {
+  width: 18px;
+  height: 18px;
+  margin-left: auto;
+  display: none;
+  // &:has(#check-burger:checked) {
+  //   display: block;
+  // }
+  &::selection {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -87,7 +107,13 @@ label {
     &:has(#check-burger:checked) {
       flex-direction: row;
       font-size: 16px;
+      & > .header-close {
+        display: none;
+      }
     }
+  }
+  .header-close {
+    display: none;
   }
 }
 

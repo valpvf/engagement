@@ -11,10 +11,10 @@
 }
 .parent {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 1fr 3fr 1fr;
-  grid-column-gap: 50px;
-  grid-row-gap: 32px;
+  // grid-template-columns: repeat(2, 1fr);
+  // grid-template-rows: 1fr 3fr 1fr;
+  // grid-column-gap: 50px;
+  // grid-row-gap: 32px;
 }
 
 .div1 {
@@ -25,9 +25,11 @@
   }
 }
 .div2 {
-  grid-area: 2 / 1 / 4 / 2;
-  background-color: burlywood;
+  grid-area: 2 / 1 / 2 / 1;
+  // background-color: burlywood;
   background-image: url(../img/ring-size.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
   -webkit-box-shadow: 40px 40px 76px -60px rgba(34, 60, 80, 0.2);
   -moz-box-shadow: 40px 40px 76px -60px rgba(34, 60, 80, 0.2);
   box-shadow: 40px 40px 76px -60px rgba(34, 60, 80, 0.2);
@@ -68,6 +70,21 @@
   }
 }
 
-// .selections-btn > .btn {
-//   padding: 24px 36px;
-// }
+.selections-btn {
+  padding: 24px 36px;
+  width: fit-content;
+  text-align: right;
+  margin-left: auto;
+}
+
+@media screen and (min-width: 768px) {
+  .parent {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 3fr 1fr;
+    grid-column-gap: 50px;
+    grid-row-gap: 32px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+}
