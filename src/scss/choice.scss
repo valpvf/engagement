@@ -9,11 +9,11 @@
   }
 }
 .choice-grid {
-  display: grid;
-  grid-template-columns: 1fr 207px 1fr;
-  grid-template-rows: repeat(2, 109px);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
+  // display: grid;
+  // grid-template-columns: 1fr 207px 1fr;
+  // grid-template-rows: repeat(2, 109px);
+  // grid-column-gap: 0px;
+  // grid-row-gap: 0px;
 }
 .choice-title {
   grid-area: 1 / 1 / 2 / 2;
@@ -127,4 +127,17 @@
 }
 .choice-btn.btn {
   background-color: $grey;
+}
+
+@media screen and (min-width: 768px) {
+  .choice-grid {
+    display: grid;
+    grid-template-columns: 1fr 207px 1fr;
+    grid-template-rows: repeat(2, 109px);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
 }
