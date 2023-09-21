@@ -54,19 +54,23 @@ export function getProducts(products) {
         centerMode: false,
         responsive: [
           {
-            breakpoint: 768,
-            setting: {
-              slidesToShow: 2,
+            breakpoint: 1280,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              arrows: false,
             },
           },
           {
-            breakpoint: 375,
-            setting: {
+            breakpoint: 768,
+            settings: {
               slidesToShow: 1,
+              slidesToScroll: 1,
+              arrows: false,
             },
           },
         ],
-        mobileFirst: true,
+        mobileFirst: false,
         // appendArrows: $('.content'),
         // appendDots: $('.content'),
       });
