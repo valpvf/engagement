@@ -1,6 +1,8 @@
 import { getDataApi } from '../servises/productsApi.js';
 import { modalWindow } from './modal/modal.js';
 
+console.log('window. innerHeight', window.innerHeight);
+
 export function getProducts(products) {
   window.prod = products;
   return window.products;
@@ -77,3 +79,17 @@ export function getProducts(products) {
     });
   }
 })();
+
+const scrollBtn = document.querySelector('.arrow-up');
+
+window.onscroll = () => {
+  if (window.scrollY > window.innerHeight) {
+    scrollBtn.classList.remove('.arrow-up_hide');
+  } else {
+    scrollBtn.classList.add('.arrow-up_hide');
+  }
+};
+
+scrollBtn.onclick = () => {
+  window.scrollTo(0, 0);
+};
