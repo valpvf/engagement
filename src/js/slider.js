@@ -1,8 +1,6 @@
 import { getDataApi } from '../servises/productsApi.js';
 import { modalWindow } from './modal/modal.js';
 
-console.log('window. innerHeight', window.innerHeight);
-
 export function getProducts(products) {
   window.prod = products;
   return window.products;
