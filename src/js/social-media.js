@@ -1,4 +1,3 @@
-console.log('pageHeight', window.pageYOffset);
 $('.ring').hover(function () {
   $('.footer').toggleClass('color-ring');
   $('.footer').toggleClass('footer-gradient');

@@ -19,26 +19,67 @@
 }
 
 .s404-4 {
-  width: 215px;
-  height: 250px;
+  width: 72px;
+  height: 92px;
 }
 
 .s404-ring {
   position: relative;
-  bottom: 25px;
-  width: 333px;
-  height: 455px;
-  margin-right: 60px;
+  bottom: 15px;
+  width: 110px;
+  height: 168px;
+  margin-right: 15px;
 }
 
 .s404-title {
-  font-size: 30px;
+  padding: 0 16px;
+  font-size: 16px;
+  text-align: center;
 }
 
 .s404-btn {
+  width: 288px;
   padding: 16px;
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 500;
   &:hover {
     background-color: $primaryRed;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .s404-4 {
+    width: 77px;
+    height: 101px;
+  }
+  .s404-ring {
+    width: 119px;
+    height: 183px;
+    margin-right: 13px;
+  }
+  .s404-title {
+    font-size: 20px;
+  }
+  .s404-btn {
+    width: 330px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .s404-4 {
+    width: 215px;
+    height: 250px;
+  }
+  .s404-ring {
+    bottom: 25px;
+    width: 333px;
+    height: 455px;
+    margin-right: 60px;
+  }
+  .s404-title {
+    font-size: 30px;
+  }
+  .s404-btn {
+    font-size: 20px;
   }
 }
