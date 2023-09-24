@@ -15,7 +15,7 @@
           <p class="rinds-card-price">${e==null?void 0:e.price.toLocaleString()} грн.</p>  
         </div>
         <p class="rings-card-description">${e==null?void 0:e.productDescription}</p>
-        <button class="rings-card-btn">Записатися на примірку</button
+        <button class="rings-card-btn">Записатись на примірку</button
         ><button class="rings-card-consultation">Консультація</button>
         <h3 class="rings-card-arttext">Час діяти!</h3>
       </div>
