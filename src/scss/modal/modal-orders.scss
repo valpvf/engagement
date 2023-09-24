@@ -1,32 +1,31 @@
 @import 'normalize.css';
 @import './../variables.scss';
-
 .modal-order {
   text-align: center;
 }
 .modal-order-title {
+  margin-bottom: 16px;
   color: #000000;
   font-family: Marianna;
-  font-size: 100px;
+  font-size: 40px;
   line-height: normal;
 }
 
 .modal-order-form {
   display: flex;
   flex-direction: column;
-  gap: 33px;
+  gap: 16px;
 }
 
 .modal-input {
-  width: 486px;
-  height: 72px;
-  padding: 18px 12px;
-  border-radius: 20px;
+  width: 100%;
+  padding: 16px 20px;
   color: $grey;
-  font-size: 20px;
   border: 1px solid $lightGrey;
-  background: #fff;
+  border-radius: 20px;
   outline: transparent;
+  background: #fff;
+  font-size: 16px;
 }
 
 .modal-input:is(:focus, :hover) {
@@ -38,14 +37,13 @@
   margin: 0;
 }
 
-// .modal-input-text > span {
-//   display: block;
-//   margin-bottom: 4px;
-//   letter-spacing: 0.04em;
-//   color: var(--subtle-text-clr);
-//   font-size: 12px;
-//   line-height: 1.33;
-// }
+.modal-input-text > span {
+  display: block;
+  margin-bottom: 4px;
+  letter-spacing: 0.04em;
+  font-size: 12px;
+  line-height: 1.33;
+}
 
 .modal-input::placeholder {
   color: rgba(117, 117, 117, 0.5);
@@ -53,53 +51,58 @@
 
 .modal-input-wrap {
   position: relative;
-  margin: 0;
 }
 
 .modal-order-icon {
   position: absolute;
   top: 50%;
-  right: 40px;
+  right: 2%;
   width: 40px;
   height: 40px;
   transform: translateY(-50%);
   fill: rgba(117, 117, 117, 0.5);
 }
 
-.modal-input:focus + .modal-icon {
-  fill: $primaryRed;
-}
-
 .modal-check {
   width: 20px;
   height: 20px;
+  margin-inline-start: -20px;
 }
 
 .modal-text {
-  display: flex;
   position: relative;
-  align-items: baseline;
   left: -18px;
-  margin-top: 0;
-  margin-bottom: 4px;
+  display: flex;
+  align-items: center;
   transition: backgraund-color var(--tra), border var(--tra), fill var(--tra);
   letter-spacing: 0.04em;
   color: $black;
-  font-size: 20px;
-  line-height: 1.33;
+  font-size: 16px;
+  line-height: 1.5;
   gap: 3px;
 }
 
-.modal-field {
-  padding-left: 35px;
+.modal-text span {
   display: flex;
   align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+  border-radius: 2px;
+  fill: transparent;
+}
+
+.modal-field {
+  display: flex;
+  align-items: center;
+  padding-left: 35px;
 }
 
 .modal-check:checked + .modal-text span {
+  left: -50px;
   border: none;
   background-color: $primaryRed;
-  left: -50px;
   fill: $red;
 }
 
@@ -107,17 +110,17 @@
   border: solid $primaryRed;
 }
 
-.modal-btn {
+.modal-btn.btn {
   display: flex;
-  width: auto;
-  padding: 24px 36px;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 16px;
   color: ffffff;
-  font-size: 24px;
-  font-weight: 500;
   border-radius: 30px;
   background: $black;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .modal-error {
@@ -133,4 +136,43 @@
 .modal-input:invalid:not(:placeholder-shown):not(:focus-visible)
   ~ .modal-error {
   opacity: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-order-title {
+    font-size: 60px;
+  }
+  .modal-order-form {
+    gap: 24px;
+  }
+  .modal-input {
+    padding: 18px 12px;
+    font-size: 18px;
+  }
+  .modal-text {
+    font-size: 18px;
+  }
+  .modal-btn.btn {
+    padding: 16px 36px;
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .modal-order-title {
+    font-size: 85px;
+  }
+  .modal-order-form {
+    gap: 32px;
+  }
+  .modal-input {
+    font-size: 20px;
+  }
+  .modal-text {
+    font-size: 20px;
+  }
+  .modal-btn.btn {
+    padding: 24px 36px;
+    font-size: 24px;
+  }
 }

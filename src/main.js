@@ -1,12 +1,12 @@
 import './js/loader.js';
 import './servises/productsApi.js';
-import './js/slider.js';
 import './js/social-media.js';
 import './js/choice.js';
 import './js/products.js';
 import './js/modal/modal.js';
 import './js/modal/modal-end.js';
 import '/scss/loader.scss';
+import './js/slider.js';
 import '/scss/iconsfont.scss';
 import '/scss/styles.scss';
 import '/scss/header.scss';
@@ -20,7 +20,7 @@ import '/scss/footer.scss';
 import '/scss/modal/modal.scss';
 import '/scss/slick.scss';
 import '/scss/modal/modal-rings-card.scss';
-import '/scss/modal/modal-orders.scss';
+// import '/scss/modal/modal-orders.scss';
 import '/scss/modal/modal-end.scss';
 
 // import javascriptLogo from "../javascript.svg";

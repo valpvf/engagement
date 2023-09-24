@@ -1,20 +1,45 @@
 @import 'normalize.css';
 @import './../variables.scss';
-
 .modal-end-art {
+  margin-bottom: 12px;
   color: $black;
   font-family: Marianna;
-  font-size: 140px;
+  font-size: 40px;
   line-height: 1;
-  margin-bottom: 60px;
 }
 
 .modal-end-title {
+  margin-bottom: 12px;
   font-size: 40px;
-  font-weight: 300;
-  margin-bottom: 24px;
 }
 
 .modal-end-text {
-  font-size: 20px;
+  font-size: 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-end-art {
+    font-size: 60px;
+  }
+  .modal-end-title {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .modal-end-text {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .modal-end-art {
+    font-size: 140px;
+  }
+  .modal-end-title {
+    margin-bottom: 24px;
+    font-size: 40px;
+    font-weight: 300;
+  }
+  .modal-end-text {
+    font-size: 20px;
+  }
 }

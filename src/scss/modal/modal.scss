@@ -1,30 +1,29 @@
 @import 'normalize.css';
 @import './../variables.scss';
-
 .backdrop {
   position: fixed;
+  z-index: 3;
   top: 0;
   width: 100vw;
   height: 100vh;
   transition: opacity var(--tra), visibility var(--tra);
   background-color: rgba(10, 13, 23, 0.8);
-  z-index: 3;
 }
 
 .modal {
   position: absolute;
+  z-index: 4;
   top: 50%;
   left: 50%;
   min-width: 320px;
   min-height: 320px;
-  padding: 30px;
+  padding: 36px 16px 12px;
   transition: transform var(--tra);
   transform: translate(-50%, -50%) scaleY(1);
   border-radius: 30px;
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  z-index: 4;
 }
 
 .is-hidden {
@@ -39,12 +38,10 @@
 
 .modal-close {
   position: absolute;
-  display: block;
-  cursor: pointer;
   top: 25px;
   right: 25px;
-  // width: 24px;
-  // height: 24px;
+  display: block;
+  cursor: pointer;
   transition: color var(--tra), background-color var(--tra);
   color: $white;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -56,149 +53,33 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 26px;
-  height: 26px;
+  width: 15px;
+  height: 15px;
   transform: translate(-50%, -50%);
   fill: rgba(10, 13, 23, 0.5);
 }
 
 .modal-close-svg use:is(:hover, :focus) {
-  fill: $darkRed;
   background-color: $darkRed;
+  fill: $darkRed;
 }
 
-.modal-title {
-  margin-bottom: 16px;
-  text-align: center;
-  letter-spacing: 0.02em;
-  color: var(--dark-clr);
-  font-weight: 500;
-  line-height: 1.5;
+@media screen and (min-width: 768px) {
+  .modal {
+    padding: 30px;
+  }
+  .modal-close-svg {
+    width: 20px;
+    height: 20px;
+  }
 }
 
-/* .modal-form {} */
-
-.modal-input {
-  width: 100%;
-  margin: 0;
-  height: 40px;
-  padding: 8px 38px;
-  letter-spacing: 0.04em;
-  color: #000000;
-  border: 1px solid rgba(33, 33, 33, 0.2);
-  border-radius: 4px;
-  outline: transparent;
-  font-size: 12px;
-  line-height: 1.33;
-}
-
-.modal-input[name='user-comment'] {
-  display: block;
-  height: 120px;
-  padding: 8px 16px;
-  resize: none;
-  color: #000000;
-}
-
-.modal-input:is(:focus, :hover) {
-  border-color: var(--primary-brand-clr);
-}
-
-.modal-input-text {
-  display: block;
-  margin-bottom: 8px;
-}
-
-.modal-input-text > span {
-  display: block;
-  margin-bottom: 4px;
-  letter-spacing: 0.04em;
-  color: var(--subtle-text-clr);
-  font-size: 12px;
-  line-height: 1.33;
-}
-
-.modal-input::placeholder {
-  color: rgba(117, 117, 117, 0.5);
-}
-
-.modal-input-wrap {
-  position: relative;
-}
-
-.modal-icon {
-  position: absolute;
-  top: 50%;
-  left: 16px;
-  transform: translateY(-50%);
-  fill: var(--dark-clr);
-}
-
-.modal-input:focus + .modal-icon {
-  fill: var(--primary-brand-clr);
-}
-
-/* .modal-check {} */
-
-.modal-text {
-  display: flex;
-  align-items: baseline;
-  margin-top: 16px;
-  margin-bottom: 24px;
-  transition: backgraund-color var(--tra), border var(--tra), fill var(--tra);
-  letter-spacing: 0.04em;
-  color: #757575;
-  font-size: 12px;
-  line-height: 1.33;
-  gap: 3px;
-}
-
-.modal-text span {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 16px;
-  height: 16px;
-  margin-right: 8px;
-  border: 1.25px solid var(--dark-clr);
-  border-radius: 2px;
-  fill: transparent;
-}
-
-.modal-text a {
-  display: block;
-  color: var(--pressed-state-clr);
-}
-
-.modal-check:checked + .modal-text span {
-  border: none;
-  background-color: var(--pressed-state-clr);
-  fill: var(--light-clr);
-}
-
-.modal-check:is(:hover, :focus) + .modal-text span {
-  border: solid var(--pressed-state-clr);
-}
-
-.modal-btn {
-  display: block;
-  width: 169px;
-  height: 56px;
-  margin: 0 auto;
-  transition: backgraund-color var(--tra), box-shadow var(--tra),
-    color var(--tra);
-  color: var(--primary-bg-clr);
-  background-color: var(--primary-brand-clr);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-}
-
-.to-top {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  align-items: center;
+@media screen and (min-width: 1280px) {
+  .modal {
+    padding: 30px;
+  }
+  .modal-close-svg {
+    width: 26px;
+    height: 26px;
+  }
 }
