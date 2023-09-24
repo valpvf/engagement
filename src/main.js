@@ -20,7 +20,7 @@ import '/scss/footer.scss';
 import '/scss/modal/modal.scss';
 import '/scss/slick.scss';
 import '/scss/modal/modal-rings-card.scss';
-import '/scss/modal/modal-orders.scss';
+// import '/scss/modal/modal-orders.scss';
 import '/scss/modal/modal-end.scss';
 
 // import javascriptLogo from "../javascript.svg";

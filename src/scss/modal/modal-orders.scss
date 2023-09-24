@@ -1,6 +1,5 @@
 @import 'normalize.css';
 @import './../variables.scss';
-
 .modal-order {
   text-align: center;
 }
@@ -21,12 +20,12 @@
 .modal-input {
   width: 100%;
   padding: 16px 20px;
-  border-radius: 20px;
   color: $grey;
-  font-size: 16px;
   border: 1px solid $lightGrey;
-  background: #fff;
+  border-radius: 20px;
   outline: transparent;
+  background: #fff;
+  font-size: 16px;
 }
 
 .modal-input:is(:focus, :hover) {
@@ -71,10 +70,10 @@
 }
 
 .modal-text {
-  display: flex;
   position: relative;
-  align-items: center;
   left: -18px;
+  display: flex;
+  align-items: center;
   transition: backgraund-color var(--tra), border var(--tra), fill var(--tra);
   letter-spacing: 0.04em;
   color: $black;
@@ -95,15 +94,15 @@
 }
 
 .modal-field {
-  padding-left: 35px;
   display: flex;
   align-items: center;
+  padding-left: 35px;
 }
 
 .modal-check:checked + .modal-text span {
+  left: -50px;
   border: none;
   background-color: $primaryRed;
-  left: -50px;
   fill: $red;
 }
 
@@ -113,16 +112,15 @@
 
 .modal-btn.btn {
   display: flex;
-  // width: fit-content;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
   padding: 16px;
-  justify-content: center;
-  align-items: center;
   color: ffffff;
-  font-size: 14px;
-  font-weight: 500;
   border-radius: 30px;
   background: $black;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .modal-error {

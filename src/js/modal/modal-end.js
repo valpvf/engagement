@@ -11,7 +11,7 @@ export function modalEnd(typeForm) {
   } else {
     order.innerHTML = `
       <h3 class="modal-end-art">Дякуємо за Ваш запит!</h3>
-      <h2 class="modal-end-title">Ми передзвонимо Вам протягом 10 хвилин</h2>
+      <h2 class="modal-end-title">Ми передзвонемо Вам найближчим часом!</h2>
     `;
   }
   modalContainer.insertAdjacentElement('afterbegin', order);

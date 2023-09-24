@@ -1,18 +1,18 @@
 @import 'normalize.css';
 @import './../variables.scss';
-
 .backdrop {
   position: fixed;
+  z-index: 3;
   top: 0;
   width: 100vw;
   height: 100vh;
   transition: opacity var(--tra), visibility var(--tra);
   background-color: rgba(10, 13, 23, 0.8);
-  z-index: 3;
 }
 
 .modal {
   position: absolute;
+  z-index: 4;
   top: 50%;
   left: 50%;
   min-width: 320px;
@@ -24,7 +24,6 @@
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  z-index: 4;
 }
 
 .is-hidden {
@@ -39,10 +38,10 @@
 
 .modal-close {
   position: absolute;
-  display: block;
-  cursor: pointer;
   top: 25px;
   right: 25px;
+  display: block;
+  cursor: pointer;
   transition: color var(--tra), background-color var(--tra);
   color: $white;
   border: 1px solid rgba(0, 0, 0, 0.1);
@@ -61,8 +60,8 @@
 }
 
 .modal-close-svg use:is(:hover, :focus) {
-  fill: $darkRed;
   background-color: $darkRed;
+  fill: $darkRed;
 }
 
 @media screen and (min-width: 768px) {
