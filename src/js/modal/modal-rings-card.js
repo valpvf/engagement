@@ -26,7 +26,7 @@ export function renderRingsCard([ringCard]) {
           <p class="rinds-card-price">${ringCard?.price.toLocaleString()} грн.</p>  
         </div>
         <p class="rings-card-description">${ringCard?.productDescription}</p>
-        <button class="rings-card-btn">Записатися на примірку</button
+        <button class="rings-card-btn">Записатись на примірку</button
         ><button class="rings-card-consultation">Консультація</button>
         <h3 class="rings-card-arttext">Час діяти!</h3>
       </div>
