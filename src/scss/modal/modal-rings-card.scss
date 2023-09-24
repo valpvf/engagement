@@ -84,6 +84,7 @@
   font-weight: 500;
 }
 .rings-card-description {
+  width: 268px;
   margin-bottom: 12px;
   color: $black;
   font-size: 16px;
@@ -108,9 +109,10 @@
 .rings-card-consultation {
   z-index: 1;
   text-align: center;
+  margin-bottom: 4px;
   border: none;
   outline: none;
-  font-size: 14px;
+  font-size: 16px;
   &:hover {
     color: $darkRed;
     text-shadow: 1px 1px 2px rgba(94, 15, 16, 0.4);
@@ -178,6 +180,7 @@
     font-size: 24px;
   }
   .rings-card-description {
+    width: 100%;
     margin-bottom: 30px;
   }
   .rings-card-btn {

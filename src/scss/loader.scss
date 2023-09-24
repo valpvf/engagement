@@ -18,16 +18,19 @@
 .loader-hide {
   opacity: 0;
 }
-// .loader {
-//   width: 75px;
-//   height: 75px;
-//   border: 10px solid rgb(216, 114, 114, 0.6);
-//   border-radius: 50%;
-//   border-left-color: rgb(216, 114, 114);
-//   animation: loader 1.3s linear infinite;
-// }
-// @keyframes loader {
-//   100% {
-//     transform: rotate(360deg);
-//   }
-// }
+
+.loader-size {
+  width: 75px;
+}
+
+@media screen and (min-width: 768px) {
+  .loader-size {
+    width: 160px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .loader-size {
+    width: 320px;
+  }
+}
