@@ -17,9 +17,9 @@ export const renderProducts = numberValue => {
     if (card.uniqueProposal > 0) {
       ring.innerHTML = `
       <div class="exclusive-label">Exclusive</div>
-      <img src="${card.mainImage}" alt="${
+      <img src=${card.mainImage} alt=${
         card.name
-      }" height="324" class="product-img">
+      } height="324" class="product-img">
       <h3 class="product-name">${card.name}</h3>
       <p class="product-text">${card.metalCharacteristics}</p>
       <span class="product-price-inner">

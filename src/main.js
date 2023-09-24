@@ -1,12 +1,12 @@
 import './js/loader.js';
 import './servises/productsApi.js';
-import './js/slider.js';
 import './js/social-media.js';
 import './js/choice.js';
 import './js/products.js';
 import './js/modal/modal.js';
 import './js/modal/modal-end.js';
 import '/scss/loader.scss';
+import './js/slider.js';
 import '/scss/iconsfont.scss';
 import '/scss/styles.scss';
 import '/scss/header.scss';

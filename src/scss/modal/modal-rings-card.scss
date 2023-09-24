@@ -3,8 +3,9 @@
 
 .modal-content {
   display: flex;
+  flex-direction: column;
   align-items: start;
-  gap: 116px;
+  gap: 12px;
 }
 .rings-card-photo {
   display: flex;
@@ -12,13 +13,13 @@
   gap: 20px;
   justify-content: center;
   & img {
-    width: 270px;
-    height: 270px;
+    display: none;
     object-fit: cover;
     box-shadow: 40px 40px 76px -60px rgba(34, 60, 80, 0.2);
     &:first-child {
-      width: 560px;
-      height: 513px;
+      display: block;
+      width: 288px;
+      height: 268px;
     }
     &:hover:not(:first-child) {
       transform: scale(2.07);
@@ -36,62 +37,67 @@
 }
 
 .rings-card-box {
-  display: grid;
+  display: flex;
   flex-direction: column;
 }
 
 .rings-card-title {
-  margin-bottom: 28px;
+  margin-bottom: 4px;
   color: #000000;
-  font-size: 32px;
+  font-size: 16px;
 }
 
 .rings-card-options {
   display: flex;
   flex-direction: column;
-  gap: 16px;
-  margin-bottom: 30px;
+  gap: 2px;
+  margin-bottom: 4px;
 }
 
 .rings-card-options-text {
-  margin-right: 24px;
+  font-size: 12px;
+  font-weight: 300;
+  margin-right: 16px;
   color: $grey;
+  &:nth-child(3) {
+    display: none;
+  }
 }
 .rings-card-options-text.met::before {
   color: $black;
-  margin-right: 30px;
+  margin-right: 19px;
   content: 'Метал:';
 }
 .rings-card-options-text.st::before {
   color: $black;
-  margin-right: 24px;
+  margin-right: 16px;
   content: 'Камінь:';
 }
 .rings-card-options-text.wd::before {
   color: $black;
-  margin-right: 24px;
+  margin-right: 16px;
   content: 'Розмір:';
 }
 
 .rinds-card-price {
   color: $primaryRed;
-  font-size: 34px;
+  font-size: 18px;
   font-weight: 500;
 }
 .rings-card-description {
-  margin-bottom: 35px;
+  margin-bottom: 12px;
   color: $black;
-  font-size: 24px;
+  font-size: 16px;
 }
 
 .rings-card-btn {
   display: flex;
-  width: 462px;
+  width: 288px;
   padding: 16px;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   justify-content: center;
   align-items: center;
-  font-size: 20px;
+  font-size: 18px;
   border-radius: 20px;
   border: 1px solid $black;
   background: $white;
@@ -101,9 +107,8 @@
 }
 
 .rings-card-consultation {
-  font-size: 24px;
-  text-align: right;
-  margin-bottom: 40px;
+  font-size: 14px;
+  text-align: center;
   outline: none;
   border: none;
   z-index: 1;
@@ -114,10 +119,150 @@
 }
 
 .rings-card-arttext {
-  position: absolute;
-  bottom: 5px;
-  color: #000000;
-  font-family: Marianna;
-  font-size: 130px;
-  line-height: normal;
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .modal-content {
+    flex-direction: row;
+    gap: 27px;
+  }
+  .rings-card-photo {
+    gap: 14px;
+    justify-content: center;
+    & img {
+      width: 164px;
+      height: 164px;
+      display: block;
+      &:first-child {
+        width: 344px;
+        height: 240px;
+      }
+      &:hover:not(:first-child) {
+        transform: scale(2.1);
+        bottom: 90px;
+        &:nth-child(2) {
+          left: 89px;
+        }
+        &:last-child {
+          right: 89px;
+        }
+      }
+    }
+  }
+  .rings-card-title {
+    margin-bottom: 16px;
+    font-size: 20px;
+  }
+  .rings-card-options {
+    gap: 8px;
+    margin-bottom: 18px;
+  }
+  .rings-card-options-text {
+    margin-right: 24px;
+    font-size: 16px;
+    font-weight: 400;
+    &:nth-child(3) {
+      display: block;
+    }
+  }
+  .rings-card-options-text.met::before {
+    margin-right: 2px;
+  }
+  .rings-card-options-text.st::before {
+    margin-right: 18px;
+  }
+  .rings-card-options-text.wd::before {
+    margin-right: 17px;
+  }
+  .rinds-card-price {
+    font-size: 24px;
+  }
+  .rings-card-description {
+    margin-bottom: 30px;
+  }
+  .rings-card-btn {
+    width: 332px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .rings-card-consultation {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .modal-content {
+    gap: 116px;
+  }
+  .rings-card-photo {
+    gap: 20px;
+    justify-content: center;
+    & img {
+      width: 270px;
+      height: 270px;
+      &:first-child {
+        width: 560px;
+        height: 513px;
+      }
+      &:hover:not(:first-child) {
+        transform: scale(2.07);
+        bottom: 145px;
+        &:nth-child(2) {
+          left: 145px;
+        }
+        &:last-child {
+          right: 145px;
+        }
+      }
+    }
+  }
+  .rings-card-title {
+    margin-bottom: 28px;
+    font-size: 32px;
+  }
+  .rings-card-options {
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+  .rings-card-options-text {
+    margin-right: 24px;
+    font-size: 24px;
+  }
+  .rings-card-options-text.met::before {
+    margin-right: 30px;
+  }
+  .rings-card-options-text.st::before {
+    margin-right: 24px;
+  }
+  .rings-card-options-text.wd::before {
+    margin-right: 24px;
+  }
+  .rinds-card-price {
+    font-size: 34px;
+  }
+  .rings-card-description {
+    margin-bottom: 35px;
+    font-size: 24px;
+  }
+  .rings-card-btn {
+    width: 462px;
+    margin-bottom: 32px;
+    font-size: 20px;
+  }
+  .rings-card-consultation {
+    font-size: 24px;
+    text-align: right;
+    margin-bottom: 40px;
+  }
+  .rings-card-arttext {
+    position: absolute;
+    display: block;
+    bottom: 5px;
+    color: #000000;
+    font-family: Marianna;
+    font-size: 130px;
+    line-height: normal;
+  }
 }
