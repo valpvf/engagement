@@ -71,8 +71,8 @@ export function fittingModal([ringCard]) {
                 class="modal-input"
                 name="tel"
                 type="tel"
-                title="+380 (99) 111-22-33"
-                placeholder="+380"
+                // title="+380 (99) 111-22-33"
+                placeholder="+3801112233"
                 minlength="10"
                 required
               />
