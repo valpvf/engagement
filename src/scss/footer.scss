@@ -2,7 +2,7 @@
   background: $black;
   color: #fff;
   & .container {
-    padding: 10px;
+    padding: 20px 16px 30px;
   }
 }
 
@@ -22,7 +22,6 @@
 }
 .footer-nav {
   display: none;
-  height: 200px;
   justify-content: space-between;
   align-items: center;
   line-height: 1.5;
@@ -62,9 +61,11 @@
 }
 
 .social-container {
-  width: 252px;
-  height: 252px;
-  text-align: center;
+  width: 220px;
+  height: 220px;
+  // text-align: center;
+  margin: 18px auto 16px;
+
   -webkit-transition: all 0.2s ease-in;
   -moz-transition: all 0.2s ease-in;
   -ms-transition: all 0.2s ease-in;
@@ -91,9 +92,9 @@
 .social-container a {
   display: block;
   position: relative;
-  height: 64px;
-  width: 64px;
-  line-height: 2.4em;
+  height: 45px;
+  width: 45px;
+  line-height: 1.6em;
   float: left;
   margin-right: 20px;
   margin-top: 20px;
@@ -151,14 +152,14 @@
 
 .social-container a i {
   padding-top: 6px;
-  font-size: 26px;
+  font-size: 22px;
   -webkit-transform: rotate(-45deg);
   -moz-transform: rotate(-45deg);
   -ms-transform: rotate(-45deg);
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
   &.icon-ring3 {
-    font-size: 55px;
+    font-size: 42px;
     padding-top: 6px;
     padding-left: 0px;
   }
@@ -245,11 +246,6 @@
     radial-gradient(circle, rgba(63, 81, 181, 0) 0%, rgba(0, 0, 0, 1) 80%);
 }
 @media screen and (min-width: 768px) {
-  .footer {
-    & .container {
-      padding: 28px 32px;
-    }
-  }
   .footer-nav {
     display: flex;
   }
@@ -261,12 +257,22 @@
       font-size: 16px;
     }
   }
+  .social-container a {
+    width: 45px;
+    height: 45px;
+    line-height: 1.6em;
+    // margin-right: 0px;
+    // margin-top: 0px;
+  }
+  .social-container a i {
+    font-size: 22px;
+  }
 }
 
 @media screen and (min-width: 1280px) {
   .footer {
     & .container {
-      padding: 10;
+      padding: 0 32px;
     }
   }
   .footer-list {
@@ -304,6 +310,23 @@
   nav-link {
     & h2 {
       font-size: 20px;
+    }
+  }
+  .social-container {
+    width: 252px;
+    height: 252px;
+    margin-top: 45px;
+    margin-bottom: 55px;
+  }
+  .social-container a {
+    line-height: 2.4em;
+    height: 64px;
+    width: 64px;
+  }
+  .social-container a i {
+    font-size: 26px;
+    &.icon-ring3 {
+      font-size: 55px;
     }
   }
 }
