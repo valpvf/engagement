@@ -7,20 +7,20 @@
         <img src=${e==null?void 0:e.thirdImage} alt=${e==null?void 0:e.name} />
       </div>
       <div class="marquee">
-  <div class="marquee-content"> 
-    <div class="marquee-item">
-      <img src=${e==null?void 0:e.mainImage} alt=${e==null?void 0:e.name} />
-    </div>
-    
-    <div class="marquee-item">
-      <img src=${e==null?void 0:e.secondImage} alt=${e==null?void 0:e.name} />
-    </div>
-    
-    <div class="marquee-item">
-      <img src=${e==null?void 0:e.thirdImage} alt=${e==null?void 0:e.name} />
-    </div>
-    </div>
-    </div>
+        <div class="marquee-content"> 
+          <div class="marquee-item">
+            <img src=${e==null?void 0:e.mainImage} alt=${e==null?void 0:e.name} />
+          </div>
+          
+          <div class="marquee-item">
+            <img src=${e==null?void 0:e.secondImage} alt=${e==null?void 0:e.name} />
+          </div>
+          
+          <div class="marquee-item">
+            <img src=${e==null?void 0:e.thirdImage} alt=${e==null?void 0:e.name} />
+          </div>
+        </div>
+      </div>
       <div class="rings-card-box">
         <h2 class="rings-card-title">${e==null?void 0:e.name}</h2>
         <div class="rings-card-options">
