@@ -3,9 +3,11 @@
   align-items: start;
   flex-direction: column;
   gap: 12px;
+  margin-top: 5px;
 }
 .rings-card-photo {
-  display: flex;
+  display: none;
+  // display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 20px;
@@ -121,12 +123,45 @@
   display: none;
 }
 
+.marquee {
+  overflow: hidden;
+}
+
+.marquee-content {
+  display: flex;
+  animation: scrolling 10s steps(2, start) infinite;
+}
+
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+.marquee-item {
+  flex: 0 0 100%;
+  margin: 0 0px;
+}
+
+.marquee-item img {
+  display: block;
+  width: 100%;
+}
+
+@keyframes scrolling {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 @media screen and (min-width: 768px) {
   .modal-content {
     flex-direction: row;
     gap: 27px;
   }
   .rings-card-photo {
+    display: flex;
     justify-content: center;
     gap: 14px;
     & img {
@@ -148,6 +183,9 @@
         }
       }
     }
+  }
+  .marquee {
+    display: none;
   }
   .rings-card-title {
     margin-bottom: 16px;
