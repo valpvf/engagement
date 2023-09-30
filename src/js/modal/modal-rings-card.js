@@ -14,20 +14,20 @@ export function renderRingsCard([ringCard]) {
         <img src=${ringCard?.thirdImage} alt=${ringCard?.name} />
       </div>
       <div class="marquee">
-  <div class="marquee-content"> 
-    <div class="marquee-item">
-      <img src=${ringCard?.mainImage} alt=${ringCard?.name} />
-    </div>
-    
-    <div class="marquee-item">
-      <img src=${ringCard?.secondImage} alt=${ringCard?.name} />
-    </div>
-    
-    <div class="marquee-item">
-      <img src=${ringCard?.thirdImage} alt=${ringCard?.name} />
-    </div>
-    </div>
-    </div>
+        <div class="marquee-content"> 
+          <div class="marquee-item">
+            <img src=${ringCard?.mainImage} alt=${ringCard?.name} />
+          </div>
+          
+          <div class="marquee-item">
+            <img src=${ringCard?.secondImage} alt=${ringCard?.name} />
+          </div>
+          
+          <div class="marquee-item">
+            <img src=${ringCard?.thirdImage} alt=${ringCard?.name} />
+          </div>
+        </div>
+      </div>
       <div class="rings-card-box">
         <h2 class="rings-card-title">${ringCard?.name}</h2>
         <div class="rings-card-options">
