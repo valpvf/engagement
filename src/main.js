@@ -1,3 +1,4 @@
+import './scss/styles.scss';
 import './js/loader.js';
 import './servises/productsApi.js';
 import './js/social-media.js';
